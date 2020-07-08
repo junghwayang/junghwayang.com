@@ -4,6 +4,7 @@ module.exports = {
     author: "Junghwa Yang",
   },
   plugins: [
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
