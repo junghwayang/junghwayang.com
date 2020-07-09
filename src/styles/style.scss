@@ -1,0 +1,104 @@
+// ========================================
+// VARIABLES
+// ========================================
+
+$base-font-color: black;
+$border-color: #ea907a;
+
+// ========================================
+// GLOBAL
+// ========================================
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  color: $base-font-color;
+}
+
+html {
+  font-family: 'Open Sans';
+  box-sizing: border-box;
+}
+
+body {
+  padding: 1.2vw;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.container {
+  width: 70vw;
+  height: 100%;
+  margin: 5rem auto;
+}
+
+// ========================================
+// BORDER FRAME
+// ========================================
+
+.border-frame {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  box-shadow: inset 0 0 0 1.3vw $border-color;
+  z-index: 10000;
+  pointer-events: none;
+}
+
+// ========================================
+// HEADER
+// ========================================
+
+header {
+  width: 100%;
+  height: 4rem;
+  position: sticky;
+  top: 1.3vh;
+  left: 1.3vw;
+  z-index: 10;
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-family: 'Yanone Kaffeesatz';
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  li {
+    margin: 0 1.3rem;
+
+    a {
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.7);
+    }
+  }
+}

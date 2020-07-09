@@ -20,19 +20,17 @@ const Header = () => {
 
   return (
     <header>
-      <h3>
-        <Link to='/'>
-          {data.site.siteMetadata.title}
-        </Link>
-      </h3>
-      
       <nav>
-        <ul className='a'>
+        <div className='logo'>
+          <Link to='/'>{data.site.siteMetadata.title}</Link>
+        </div>
+
+        <ul className='nav-bar'>
           <NavList to='/'>Home</NavList>
           <NavList to='/about'>About</NavList>
           <NavList to='/projects'>Projects</NavList>
           <NavList to='/blog'>Blog</NavList>
-          <NavList to='/note'>Note</NavList>
+          <NavList to='/til'>Today I Learned</NavList>
           <NavList to='/contact'>Contact</NavList>
         </ul>
       </nav>

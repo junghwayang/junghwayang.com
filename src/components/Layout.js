@@ -1,16 +1,25 @@
 import React from 'react'
+
 import Header from './Header'
+import Container from './Container'
 import Footer from './Footer'
 
-import '../styles/layout.scss'
+import '../styles/style.scss'
+import 'typeface-open-sans'
+import 'typeface-yanone-kaffeesatz'
 
 const Layout = props => {
   return (
-    <div>
+    <>
+      <span className='border-frame' />
       <Header />
-      {props.children}
+      <main>
+        <Container>
+          {props.children}
+        </Container>
+      </main>
       <Footer />
-    </div>
+    </>
   )
 }
 
