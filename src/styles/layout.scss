@@ -1,0 +1,165 @@
+@import 'base';
+
+@mixin header () {
+  position: relative;
+  width: 100%;
+  background-color: $header-background-color;
+}
+
+@mixin footer () {
+  position: relative;
+  width: 100%;
+  background-color: $footer-background-color;
+}
+
+
+// ========================================
+// BORDER FRAME
+// ========================================
+
+.border-frame {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  box-shadow: inset 0 0 0 1.3vw $border-color;
+  z-index: 100;
+  pointer-events: none;
+}
+
+// ========================================
+// NAV
+// ========================================
+
+nav {
+  width: 100%;
+  height: 10rem;
+  position: fixed;
+  top: 2vh;
+  left: 1.3vw;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+  font-family: 'Yanone Kaffeesatz';
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  li {
+    margin: 0 1rem 0.7rem 0;
+    font-size: 1.5rem;
+
+    a {
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.7);
+    }
+  }
+}
+
+// ========================================
+// HEADER
+// ========================================
+
+.index-header {
+  @include header;
+  height: 70vh;
+}
+
+.base-header {
+  @include header;
+  height: 20vh;
+}
+
+.title-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2vh;
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.header-wave-divider {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 0;
+  bottom: -1px;
+}
+
+.header-scallop-divider {
+  width: 100%;
+  height: 30px;
+  background: -webkit-gradient(radial, 50% 0, 10, 50% 0, 40, from($header-background-color), color-stop(0.49, $header-background-color), color-stop(0.51, #fff), to(white));
+  -webkit-background-size: 49px 100%;
+}
+
+// ========================================
+// CONTAINER
+// ========================================
+
+.container {
+  width: 70vw;
+  height: 100%;
+  margin: 5rem auto;
+}
+
+// ========================================
+// FOOTER
+// ========================================
+
+.index-footer {
+  @include footer;
+  height: 50vh;
+}
+
+.base-footer {
+  @include footer;
+  height: 30vh;
+}
+
+.footer-wave-divider {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: -1px;
+  left: 0;
+}
+
+.footer-scallop-divider {
+  width: 100%;
+  height: 30px;
+  background: -webkit-gradient(radial, 50% 100%, 10, 50% 100%, 40, from($footer-background-color), color-stop(0.49, $footer-background-color), color-stop(0.51, #fff), to(white));
+  -webkit-background-size: 49px 100%;
+}
+
+.footer-text-box {
+  width: 80vw;
+  margin: 0 auto;
+  padding-bottom: 1.5vh;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+}

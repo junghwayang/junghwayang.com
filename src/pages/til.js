@@ -2,18 +2,18 @@ import React from 'react'
 
 import Layout from '../components/Layout'
 
-const IndexPage = () => {
+const TILPage = () => {
   return (
     <Layout
-      title='Home'
-      page='index'
-      headerTitle='Hello'
+      title='TIL'
+      page='base'
+      headerTitle='TIL : Today I Learned'
     >
       <div className='text-box'>
-        <h1>Welcome!</h1>
+        <p>TIL</p>
       </div>
     </Layout>
   )
 }
 
-export default IndexPage
+export default TILPage

@@ -1,0 +1,21 @@
+@use 'base';
+
+// ========================================
+// MAIN
+// ========================================
+
+.text-box {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    margin: 2rem 0;
+  }
+
+  a {
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 3em;
+  }
+}

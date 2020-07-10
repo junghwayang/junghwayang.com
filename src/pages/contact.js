@@ -2,18 +2,18 @@ import React from 'react'
 
 import Layout from '../components/Layout'
 
-const IndexPage = () => {
+const ContactPage = () => {
   return (
     <Layout
-      title='Home'
-      page='index'
-      headerTitle='Hello'
+      title='Contact'
+      page='base'
+      headerTitle='Contact Me'
     >
       <div className='text-box'>
-        <h1>Welcome!</h1>
+        <p>Contact me</p>
       </div>
     </Layout>
   )
 }
 
-export default IndexPage
+export default ContactPage

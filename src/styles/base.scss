@@ -1,0 +1,43 @@
+// ========================================
+// VARIABLES
+// ========================================
+
+$base-font-color: black;
+// $border-color: #ea907a;
+$border-color: #8785a2;
+$header-background-color: #fae3d9;
+$footer-background-color: #8785a2;
+
+// ========================================
+// GLOBAL
+// ========================================
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  color: black;
+}
+
+html {
+  font-family: 'Open Sans';
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+main {
+  min-height: 100vh;
+}
