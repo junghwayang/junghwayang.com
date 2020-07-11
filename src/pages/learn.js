@@ -2,18 +2,18 @@ import React from 'react'
 
 import Layout from '../components/Layout'
 
-const ContactPage = () => {
+const LearnPage = () => {
   return (
     <Layout
-      title='Contact'
+      title='Learn'
       page='base'
-      headerTitle='Contact Me'
+      headerTitle='Learn In Public'
     >
       <div className='text-box'>
-        <p>Contact me</p>
+        <p>Learning..</p>
       </div>
     </Layout>
   )
 }
 
-export default ContactPage
+export default LearnPage
