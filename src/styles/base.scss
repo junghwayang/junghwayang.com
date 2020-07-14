@@ -2,11 +2,16 @@
 // VARIABLES
 // ========================================
 
-$base-font-color: black;
-// $border-color: #ea907a;
-$border-color: #8785a2;
-$header-background-color: #fae3d9;
-$footer-background-color: #8785a2;
+$background-color: #fff;
+$base-font-color: #444f5a;
+$border-color: #bad7df;
+$header-background-color: #bad7df;
+$footer-background-color: #e6a4b4;
+$page-title-color: #fce38a;
+$emphasized-color: #FFD0AE;
+$anchor-and-inlinecode-color: #e03d3e;
+$link-button-background-color: #fae3d9;
+$link-button-hover-background-color: #ea907a;
 
 // ========================================
 // GLOBAL
@@ -18,12 +23,17 @@ $footer-background-color: #8785a2;
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  color: black;
+  color: $base-font-color;
 }
 
 html {
   font-family: 'Open Sans';
   box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-color: $background-color;
 }
 
 a {

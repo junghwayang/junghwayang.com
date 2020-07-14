@@ -6,7 +6,7 @@ import Layout from '../components/Layout';
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/blog/"}}) {
         edges {
           node {
             frontmatter {
@@ -29,7 +29,7 @@ const BlogPage = () => {
       page='base'
       headerTitle='Blog'
     >
-      <ol>
+      <ul>
         {data.allMarkdownRemark.edges.map(({ node }) => {
           return (
             <li>
@@ -41,7 +41,7 @@ const BlogPage = () => {
             </li>
           );
         })}
-      </ol>
+      </ul>
     </Layout>
   );
 }

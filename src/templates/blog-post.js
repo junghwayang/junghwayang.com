@@ -3,21 +3,16 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 
-import '../styles/blog-post.scss';
-
 const BlogTemplate = props => {
   const post = props.data.markdownRemark;
 
   return (
-    <Layout
-      title='Blog'
-      page='base'
-    >
-      <div>
-        <h1 className='post-title'>{post.frontmatter.title}</h1>
-        <p className='post-date'>Published : {post.frontmatter.date}</p>
+    <Layout title='Blog'>
+      <div className='markdown'>
+        <h1 className='md-title'>{post.frontmatter.title}</h1>
+        <p className='md-date'>Published : {post.frontmatter.date}</p>
 
-        <ul className='post-tags'>
+        <ul className='md-tags'>
           <p>Tags : </p>
           {post.frontmatter.tags.map(tag => {
             return (
@@ -28,7 +23,7 @@ const BlogTemplate = props => {
         
 
         <div
-          className='blog-post'
+          className='md-html'
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </div>

@@ -5,7 +5,22 @@
   src: url('../fonts/menlo.ttf');
 }
 
-.post-title {
+// ========================================
+// BLOG LIST
+// ========================================
+
+
+
+// ========================================
+// MARKDOWN
+// ========================================
+
+.markdown {
+  width: 90%;
+  margin: 0 auto 5rem;
+}
+
+.md-title {
   font-family: 'Montserrat';
   font-size: 3rem;
   margin: -5rem 0 2rem;
@@ -13,13 +28,13 @@
   background: linear-gradient(180deg, $background-color 60%, $border-color 60%);
 }
 
-.post-date {
+.md-date {
   color: grey;
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 
-.post-tags {
+.md-tags {
   * {
     font-size: 1rem;
   }
@@ -31,19 +46,19 @@
 
   li {
     display: inline-block;
-    background-color: $link-color;
+    background-color: $link-button-background-color;
     margin: 0 0.3rem;
     padding: 0.2rem 1rem;
     border-radius: 2rem;
 
     &:hover {
       color: $background-color;
-      background-color: $link-hover-color;
+      background-color: $link-button-hover-background-color;
     }
   }
 }
 
-.blog-post {
+.md-html {
   * {
     margin: 0.5rem 0;
   }
@@ -72,6 +87,17 @@
 
   p, ol, ul, li {
     font-size: 1.1rem;
+  }
+
+  a {
+    color: $anchor-and-inlinecode-color;
+    font-weight: bold;
+
+    &:hover {
+      color: $link-button-hover-background-color;
+      border-bottom: 2px solid $base-font-color;
+      transition: all 200ms;
+    }
   }
 
   blockquote {
@@ -107,7 +133,7 @@
   li>code,
   blockquote>code {
     font-size: 90%;
-    color: #e03d3e;
+    color: $anchor-and-inlinecode-color;
     padding: 0.1rem 0.5rem;
     border-radius: 7px;
   }
