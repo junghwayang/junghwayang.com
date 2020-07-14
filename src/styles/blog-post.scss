@@ -1,0 +1,138 @@
+@import 'base';
+
+@font-face {
+  font-family: 'Menlo';
+  src: url('../fonts/menlo.ttf');
+}
+
+.post-title {
+  font-family: 'Montserrat';
+  font-size: 3rem;
+  margin: -5rem 0 2rem;
+  display: inline-block;
+  background: linear-gradient(180deg, $background-color 60%, $border-color 60%);
+}
+
+.post-date {
+  color: grey;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-tags {
+  * {
+    font-size: 1rem;
+  }
+
+  p {
+    display: inline;
+    color: grey;
+  }
+
+  li {
+    display: inline-block;
+    background-color: $link-color;
+    margin: 0 0.3rem;
+    padding: 0.2rem 1rem;
+    border-radius: 2rem;
+
+    &:hover {
+      color: $background-color;
+      background-color: $link-hover-color;
+    }
+  }
+}
+
+.blog-post {
+  * {
+    margin: 0.5rem 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat';
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-top: 5rem;
+    background: linear-gradient(180deg, $background-color 80%, $border-color 80%);
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+    display: inline-block;
+    background: linear-gradient(180deg, $background-color 60%, rgba(192, 108, 132, 0.4) 60%);
+  }
+
+  h3 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+
+  p, ol, ul, li {
+    font-size: 1.1rem;
+  }
+
+  blockquote {
+    border-left: .25em solid #dfe2e5;
+    margin: 1.5rem 0;
+    padding-left: 1.3rem;
+
+    p {
+      color: #6a737d;
+      line-height: 1.5rem;
+    }
+  }
+
+  ul {
+    list-style: disc;
+
+    li>ul {
+      list-style: circle;
+      margin-left: 2rem;
+    }
+  }
+
+  code {
+    font-family: 'Menlo';
+  }
+
+  h1>code,
+  h2>code,
+  h3>code,
+  p>code,
+  ol>code,
+  ul>code,
+  li>code,
+  blockquote>code {
+    font-size: 90%;
+    color: #e03d3e;
+    padding: 0.1rem 0.5rem;
+    border-radius: 7px;
+  }
+
+  h1>code,
+  h2>code {
+    background-color: rgba(187, 188, 189, 0.3);
+  }
+
+  h3>code,
+  p>code,
+  ol>code,
+  ul>code,
+  li>code,
+  blockquote>code {
+    background-color: #f5eee6;
+  }
+
+  pre {
+    border-radius: 15px;
+    padding: 1.8rem;
+    margin: 1.8rem 0;
+
+    code>.token.comment {
+      color: rgba(255, 255, 0, 0.8);
+    }
+  }
+}
