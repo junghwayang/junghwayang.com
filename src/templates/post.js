@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 
-const BlogTemplate = props => {
+const PostTemplate = props => {
   const post = props.data.markdownRemark;
 
   return (
@@ -31,7 +31,7 @@ const BlogTemplate = props => {
   );
 }
 
-export default BlogTemplate;
+export default PostTemplate;
 
 export const query = graphql`
   query($slug: String!) {

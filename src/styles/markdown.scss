@@ -16,12 +16,12 @@
 // ========================================
 
 .markdown {
-  width: 90%;
-  margin: 0 auto 5rem;
+  width: 70%;
+  margin: 5rem auto;
 }
 
 .md-title {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat Alternates', sans-serif;
   font-size: 3rem;
   margin: -5rem 0 2rem;
   display: inline-block;
@@ -64,7 +64,8 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat Alternates', sans-serif;
+    // font-family: 'Poppins';
   }
 
   h1 {
@@ -86,12 +87,19 @@
   }
 
   p, ol, ul, li {
-    font-size: 1.1rem;
+    margin: 0.5rem 0;
+  }
+
+  p>span {
+    font-style: italic;
+    font-weight: 600;
+    background: linear-gradient(180deg, $background-color 50%, $emphasized-color 50%) !important;
+    padding: 0 3px;
   }
 
   a {
     color: $anchor-and-inlinecode-color;
-    font-weight: bold;
+    font-weight: 600;
 
     &:hover {
       color: $link-button-hover-background-color;
@@ -132,7 +140,6 @@
   ul>code,
   li>code,
   blockquote>code {
-    font-size: 90%;
     color: $anchor-and-inlinecode-color;
     padding: 0.1rem 0.5rem;
     border-radius: 7px;
@@ -153,6 +160,7 @@
   }
 
   pre {
+    font-size: 1.2rem;
     border-radius: 15px;
     padding: 1.8rem;
     margin: 1.8rem 0;

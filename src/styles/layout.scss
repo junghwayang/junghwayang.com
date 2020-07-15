@@ -60,10 +60,16 @@ nav {
   li {
     margin: 0 1rem 0.7rem 0;
     font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5rem;
 
     a {
       text-transform: uppercase;
       color: rgba(0,0,0,0.7);
+
+      &:hover {
+        color: $link-button-hover-background-color;
+      }
     }
   }
 }
@@ -93,8 +99,9 @@ nav {
   align-items: center;
 
   h1 {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat Alternates', sans-serif;
     font-size: 3rem;
+    font-weight: 800;
   }
 
   a {
@@ -120,8 +127,8 @@ nav {
   padding: 2rem 0;
 
   h1 {
-    font-size: 3rem;
-    background: linear-gradient(180deg, $background-color 70%, $page-title-color 70%);
+    font-size: 3.5rem;
+    background: linear-gradient(180deg, $background-color 60%, $page-title-color 60%);
   }
 }
 
@@ -146,9 +153,9 @@ nav {
 // ========================================
 
 .container {
-  width: 70vw;
+  width: 90vw;
   height: 100%;
-  margin: 0 auto;
+  margin: 0 auto 5rem;
 }
 
 // ========================================

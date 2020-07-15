@@ -4,6 +4,7 @@
 
 $background-color: #fff;
 $base-font-color: #444f5a;
+$weak-font-color: #9f9f9f;
 $border-color: #bad7df;
 $header-background-color: #bad7df;
 $footer-background-color: #e6a4b4;
@@ -27,7 +28,7 @@ $link-button-hover-background-color: #ea907a;
 }
 
 html {
-  font-family: 'Open Sans';
+  font-family: 'Poppins';
   box-sizing: border-box;
 }
 
@@ -44,8 +45,10 @@ ul {
   list-style: none;
 }
 
-p {
-  font-size: 1.2rem;
+p, li {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 2rem;
 }
 
 main {

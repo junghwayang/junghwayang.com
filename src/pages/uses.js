@@ -1,12 +1,15 @@
-import React from 'react'
+import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
-import Layout from '../components/Layout'
+import Layout from '../components/Layout';
 
 const UsesPage = () => {
   const data = useStaticQuery(graphql`
     query {
       markdownRemark(frontmatter: {category: {eq: "uses"}}) {
+        frontmatter {
+          title
+        }
         html
       }
     }
@@ -14,9 +17,9 @@ const UsesPage = () => {
 
   return (
     <Layout
-      title='Uses'
+      title='Things I use'
       page='base'
-      headerTitle='Things I use'
+      headerTitle={data.markdownRemark.frontmatter.title}
     >
       <div className='markdown'>
         <div
@@ -25,7 +28,7 @@ const UsesPage = () => {
         />
       </div>
     </Layout>
-  )
+  );
 }
 
-export default UsesPage
+export default UsesPage;

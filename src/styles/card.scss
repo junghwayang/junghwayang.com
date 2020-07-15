@@ -1,0 +1,172 @@
+@import 'base';
+
+// ========================================
+// PROJECT LIST
+// ========================================
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2.5rem;
+  place-content: space-around space-around;
+
+  .project-item {
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+    overflow: hidden;
+
+    .project-preview {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .project-info {
+      padding: 2rem 1rem;
+      text-align: center;
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h4 {
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+      }
+
+      p {
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+        color: rgba(0,0,0,0.6);
+      }
+
+      a {
+        display: inline-block;
+        padding: 0.7rem 1rem;
+        text-align: center;
+        background-color: #d1bbbb;
+        color: white;
+        border-radius: 1rem;
+        margin: 3px;
+
+        &:hover {
+          background-color: #aa3d3d;
+        }
+      }
+    }
+  }
+}
+
+// ========================================
+// MEDIA QUERIES
+// ========================================
+
+@media screen and (max-width: 800px) {
+  .project {
+    flex-direction: column;
+  }
+
+  .project-preview {
+    width: 100%;
+  }
+
+  .project-info {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    a {
+    }
+  }
+}
+
+// ========================================
+// BLOG LIST
+// ========================================
+
+.blog-item {
+  width: 80%;
+  margin: 0 auto 0.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:hover {
+    background-color: rgb(228, 224, 224);
+    border-radius: 10px;
+  }
+
+  * {
+    margin: 0 0.5rem;
+  }
+
+  div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  img {
+    width: 2.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+  }
+
+  h3 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  p {
+    color: $weak-font-color;
+    font-size: 1rem;
+    justify-self: flex-end;
+  }
+}
+
+// ========================================
+// LEARNING LIST
+// ========================================
+
+.note-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 2.5rem;
+}
+
+.note-category {
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(180deg, $background-color 60%, rgba(192, 108, 132, 0.4) 60%);
+  }
+
+  ul {
+    list-style: disc inside;
+
+    li {
+      padding: 0.2rem 0 0.2rem 1rem;
+
+      &:hover {
+        background-color: $link-button-background-color;
+        border-radius: 7px;
+      }
+    }
+  }
+}

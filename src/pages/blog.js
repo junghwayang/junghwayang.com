@@ -2,11 +2,12 @@ import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 
 import Layout from '../components/Layout';
+import BlogCard from '../components/BlogCard';
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/blog/"}}) {
+      allMarkdownRemark(filter: {fields: {slug: {regex: "/blog/"}}}, sort: {order: DESC, fields: frontmatter___date}) {
         edges {
           node {
             frontmatter {
@@ -33,10 +34,12 @@ const BlogPage = () => {
         {data.allMarkdownRemark.edges.map(({ node }) => {
           return (
             <li>
-              <Link to={`/blog${node.fields.slug}`}>
-                <h2>{node.frontmatter.title}</h2>
-                <p>{node.frontmatter.date}</p>
-                {/* <p>{node.frontmatter.description}</p> */}
+              <Link to={node.fields.slug}>
+                <BlogCard
+                  title={node.frontmatter.title}
+                  tags={node.frontmatter.tags}
+                  date={node.frontmatter.date}
+                />
               </Link>
             </li>
           );
