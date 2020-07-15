@@ -19,21 +19,22 @@ const Nav = props => {
   `)
 
   return (
-    // <header>
-      <nav>
-        <div className='logo'>
-          <Link to='/'>{data.site.siteMetadata.title}</Link>
-        </div>
+    <nav>
+      <div>
+        <Link to='/'>
+          <img src='icons/heart-with-arrow.svg' alt='Logo' className='logo' />
+        </Link>
+      </div>
 
-        <ul className='nav-bar'>
-          <NavList to='/about'>About</NavList>
-          <NavList to='/projects'>Projects</NavList>
-          <NavList to='/blog'>Blog</NavList>
-          <NavList to='/learn'>Learn In Public</NavList>
-          <NavList to='/resources'>Resources</NavList>
-        </ul>
-      </nav>
-    // </header>
+      <ul className='nav-bar'>
+        <NavList to='/about'>About –</NavList>
+        <NavList to='/projects'>Projects –</NavList>
+        <NavList to='/blog'>Blog –</NavList>
+        <NavList to='/learn'>Learn In Public –</NavList>
+        <NavList to='/resources'>Resources –</NavList>
+        <NavList to='/uses'>Things I Use –</NavList>
+      </ul>
+    </nav>
   )
 }
 
