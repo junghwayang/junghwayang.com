@@ -1,4 +1,4 @@
-@import 'base';
+@import 'global';
 
 // ========================================
 // MAIN
@@ -28,16 +28,7 @@
   a>img {
     display: inline;
     width: 1.5rem;
-    // background-color: $link-button-background-color;
-    // border-radius: 2rem;
     margin: 0 0.5rem;
-    // padding: 0.2rem 1rem;
-    // transition: all 400ms;
-
-    // &:hover {
-      // background-color: $link-button-hover-background-color;
-      // color: $background-color;
-    // }
   }
 }
 

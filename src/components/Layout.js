@@ -5,7 +5,7 @@ import Nav from './Nav';
 import Header from './Header';
 import Footer from './Footer';
 
-import '../styles/base.scss';
+import '../styles/global.scss';
 import '../styles/layout.scss';
 import '../styles/page.scss';
 import '../styles/card.scss';

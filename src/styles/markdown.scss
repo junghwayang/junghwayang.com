@@ -1,14 +1,13 @@
-@import 'base';
+@import 'global';
 
 @font-face {
   font-family: 'Menlo';
-  src: url('../fonts/menlo.ttf');
+  src: url('fonts/menlo.ttf');
 }
 
 // ========================================
 // BLOG LIST
 // ========================================
-
 
 
 // ========================================
@@ -65,7 +64,6 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat Alternates', sans-serif;
-    // font-family: 'Poppins';
   }
 
   h1 {
