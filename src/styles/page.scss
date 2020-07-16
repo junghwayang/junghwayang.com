@@ -5,7 +5,7 @@
 // ========================================
 
 .text-box {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
 
   h1 {
@@ -37,4 +37,55 @@
   font-weight: bold;
   background: linear-gradient(180deg, $background-color 50%, $emphasized-color 50%);
   padding: 0 3px;
+}
+
+// ========================================
+// SKILLS SECTION
+// ========================================
+
+section {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section.skills {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+// ========================================
+// CONTACT SECTION
+// ========================================
+
+section.contact {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h3 {
+    font-family: 'Yanone Kaffeesatz';
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  a {
+    font-size: 1.5rem;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    label {
+      color: $background-color;
+    }
+  }
 }

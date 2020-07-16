@@ -27,7 +27,6 @@ const BlogPage = () => {
   return (
     <Layout
       title='Blog'
-      page='base'
       headerTitle='Blog'
     >
       <ul>

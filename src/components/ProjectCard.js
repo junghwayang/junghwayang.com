@@ -9,7 +9,7 @@ const ProjectCard = props => {
 
       <div className='project-info'>
         <h1>{props.title}</h1>
-        <h4>SKILLS : {props.skills.join(', ')}</h4>
+        <h4>{props.skills.join(', ')}</h4>
         <p>{props.description}</p>
         <a href={props.demo} target='__blank'>View Demo</a>
         <a href={props.code} target='__blank'>Source Code</a>

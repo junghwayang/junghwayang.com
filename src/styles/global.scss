@@ -7,7 +7,7 @@ $base-font-color: #444f5a;
 $weak-font-color: #9f9f9f;
 $border-color: #bad7df;
 $header-background-color: #bad7df;
-$footer-background-color: #e6a4b4;
+$footer-background-color: #fce38a;
 $page-title-color: #fce38a;
 $emphasized-color: #FFD0AE;
 $anchor-and-inlinecode-color: #e03d3e;
@@ -52,5 +52,6 @@ p, li {
 }
 
 main {
+  width: 100vw;
   min-height: 100vh;
 }

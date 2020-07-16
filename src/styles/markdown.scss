@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'Menlo';
-  src: url('fonts/menlo.ttf');
+  src: url('../../static/fonts/menlo.ttf');
 }
 
 // ========================================
@@ -57,7 +57,7 @@
   }
 }
 
-.md-html {
+.page-md-html, .md-html {
   * {
     margin: 0.5rem 0;
   }
@@ -106,6 +106,23 @@
     }
   }
 
+  ul {
+    list-style: disc;
+
+    li>ul {
+      list-style: circle;
+      margin-left: 2rem;
+    }
+  }
+}
+
+.md-html {
+  p, ol, ul, li {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    margin: 0.2rem 0;
+  }
+
   blockquote {
     border-left: .25em solid #dfe2e5;
     margin: 1.5rem 0;
@@ -117,17 +134,9 @@
     }
   }
 
-  ul {
-    list-style: disc;
-
-    li>ul {
-      list-style: circle;
-      margin-left: 2rem;
-    }
-  }
-
   code {
     font-family: 'Menlo';
+    font-size: 90%;
   }
 
   h1>code,
@@ -160,11 +169,19 @@
   pre {
     font-size: 1.2rem;
     border-radius: 15px;
-    padding: 1.8rem;
+    padding: 1.5rem;
     margin: 1.8rem 0;
 
     code>.token.comment {
       color: rgba(255, 255, 0, 0.8);
+    }
+
+    code>.token.parameter {
+      color: #ccc;
+    }
+
+    code>.token.interpolation {
+      color: #ccc;
     }
   }
 }

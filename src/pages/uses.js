@@ -18,12 +18,11 @@ const UsesPage = () => {
   return (
     <Layout
       title='Things I use'
-      page='base'
       headerTitle={data.markdownRemark.frontmatter.title}
     >
       <div className='markdown'>
         <div
-          className='md-html'
+          className='page-md-html'
           dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
         />
       </div>
