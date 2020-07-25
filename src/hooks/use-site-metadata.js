@@ -9,7 +9,6 @@ export const useSiteMetadata = () => {
           author
           siteUrl
           description
-          logo
         }
       }
     }
