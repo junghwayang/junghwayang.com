@@ -3,12 +3,12 @@ module.exports = {
     title: "JUNGHWA",
     author: "Junghwa Yang",
     siteUrl: "https://junghwayang.com",
-    description: "Personal website for software engineer built with GatsbyJS and GraphQL",
-    logo: "https://junghwayang.com/logo.png",
+    description: "Personal website for software engineer built with React, GatsbyJS and GraphQL",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -26,6 +26,13 @@ module.exports = {
               noInlineHighlight: true,
             },
           },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 750,
+            },
+          },
+          `gatsby-remark-relative-images`,
         ],
       },
     },
