@@ -11,24 +11,25 @@ import '../styles/page.scss';
 import '../styles/card.scss';
 import '../styles/markdown.scss';
 
-import 'typeface-yanone-kaffeesatz';
-import 'typeface-parisienne';
 import 'typeface-montserrat';
 import 'typeface-montserrat-alternates';
 import 'typeface-poppins';
+import 'typeface-open-sans';
+import 'typeface-yanone-kaffeesatz';
+import 'typeface-parisienne';
 
 const Layout = props => {
   return (
-    <body>
+    <div>
       <Head pageTitle={props.title} />
-      <span className='border-frame' />
+      <div className='border-frame' />
       <Nav />
       <Header page={props.page} headerTitle={props.headerTitle} />
-      <main className='container'>
+      <main>
         {props.children}
       </main>
       <Footer page={props.page} />
-    </body>
+    </div>
   );
 }
 
