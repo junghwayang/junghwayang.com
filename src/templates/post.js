@@ -17,11 +17,10 @@ const PostTemplate = props => {
           {post.frontmatter.tags.map(tag => {
             return (
               <li>{tag}</li>
-            )
+            );
           })}
         </ul>
         
-
         <div
           className='md-html'
           dangerouslySetInnerHTML={{ __html: post.html }}

@@ -11,8 +11,10 @@ const ProjectCard = props => {
         <h1>{props.title}</h1>
         <h4>{props.skills.join(', ')}</h4>
         <p>{props.description}</p>
-        <a href={props.demo} target='__blank'>View Demo</a>
-        <a href={props.code} target='__blank'>Source Code</a>
+        <div className='source-icons'>
+          <a href={props.demo} target='__blank'>View Demo <img src='icons/link.svg' /></a>
+          <a href={props.code} target='__blank'>Source Code <img src='icons/github.png' /></a>
+        </div>
       </div>
     </div>
   );

@@ -6,103 +6,78 @@
 }
 
 // ========================================
-// BLOG LIST
-// ========================================
-
-
-// ========================================
 // MARKDOWN
 // ========================================
 
 .markdown {
-  width: 70%;
-  margin: 5rem auto;
+  width: 60vw;
+  max-width: 1200px;
+  margin: 0 auto 5rem;
 }
 
 .md-title {
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-size: 3rem;
-  margin: -5rem 0 2rem;
-  display: inline-block;
-  background: linear-gradient(180deg, $background-color 60%, $border-color 60%);
+  font-family: $title-font-family;
+  font-size: 3.5rem;
+  margin: -7rem 0 2rem;
 }
 
-.md-date {
-  color: grey;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+.md-date, .md-tags>p {
+  color: $weak-font-color;
+  font-size: 1.1rem;
 }
 
 .md-tags {
-  * {
-    font-size: 1rem;
-  }
-
   p {
     display: inline;
-    color: grey;
   }
 
   li {
+    font-size: 1.1rem;
     display: inline-block;
-    background-color: $link-button-background-color;
-    margin: 0 0.3rem;
-    padding: 0.2rem 1rem;
+    background-color: $tags-color;
+    margin: 0 .2rem;
+    padding: 0 .7rem;
     border-radius: 2rem;
-
-    &:hover {
-      color: $background-color;
-      background-color: $link-button-hover-background-color;
-    }
   }
 }
 
 .page-md-html, .md-html {
-  * {
-    margin: 0.5rem 0;
-  }
-
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: $title-font-family;
   }
 
   h1 {
-    font-size: 2.5rem;
-    margin-top: 5rem;
-    background: linear-gradient(180deg, $background-color 80%, $border-color 80%);
+    font-size: 3rem;
+    margin: 5rem 0 3rem;
   }
 
   h2 {
-    font-size: 2rem;
-    margin-top: 2rem;
+    font-size: 2.5rem;
     display: inline-block;
-    background: linear-gradient(180deg, $background-color 60%, rgba(192, 108, 132, 0.4) 60%);
+    margin: 3rem 0 1rem;
+    border-bottom: 5px solid $weak-font-color;
   }
 
   h3 {
     margin-top: 2rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   p, ol, ul, li {
-    margin: 0.5rem 0;
+    margin: .5rem 0;
   }
 
   p>span {
-    font-style: italic;
-    font-weight: 600;
-    background: linear-gradient(180deg, $background-color 50%, $emphasized-color 50%) !important;
-    padding: 0 3px;
+    @include emphasized;
   }
 
   a {
-    color: $anchor-and-inlinecode-color;
+    color: $markdown-link-font-color;
     font-weight: 600;
 
     &:hover {
-      color: $link-button-hover-background-color;
-      border-bottom: 2px solid $base-font-color;
-      transition: all 200ms;
+      color: $markdown-link-hover-color;
+      transition: all 200ms ease;
     }
   }
 
@@ -116,21 +91,24 @@
   }
 }
 
+.page-md-html {
+  margin-top: -4rem;
+}
+
 .md-html {
   p, ol, ul, li {
-    font-family: 'Open Sans';
-    font-weight: 400;
-    margin: 0.2rem 0;
+    font-family: $text-font-family;
+    margin: .2rem 0;
   }
 
   blockquote {
-    border-left: .25em solid #dfe2e5;
+    border-left: 4px solid $weak-font-color;
     margin: 1.5rem 0;
-    padding-left: 1.3rem;
+    padding-left: 1rem;
 
     p {
-      color: #6a737d;
-      line-height: 1.5rem;
+      color: $weak-font-color;
+      line-height: 1.7rem;
     }
   }
 
@@ -147,14 +125,14 @@
   ul>code,
   li>code,
   blockquote>code {
-    color: $anchor-and-inlinecode-color;
-    padding: 0.1rem 0.5rem;
+    color: $inlinecode-color;
+    padding: .1rem .5rem;
     border-radius: 7px;
   }
 
   h1>code,
   h2>code {
-    background-color: rgba(187, 188, 189, 0.3);
+    background-color: rgba(188, 188, 188, .3);
   }
 
   h3>code,
@@ -173,15 +151,31 @@
     margin: 1.8rem 0;
 
     code>.token.comment {
-      color: rgba(255, 255, 0, 0.8);
+      color: $emphasized-color;
     }
 
     code>.token.parameter {
       color: #ccc;
     }
 
-    code>.token.interpolation {
-      color: #ccc;
+    code>.token.template-string>.token.interpolation{
+      color: #f6ab6c;
     }
+  }
+}
+
+// ========================================
+// MEDIA QUERIES
+// ========================================
+
+@media screen and (max-width: 1200px) {
+  .markdown {
+    width: 70vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .markdown {
+    width: 80vw;
   }
 }

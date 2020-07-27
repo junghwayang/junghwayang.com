@@ -50,7 +50,7 @@ const IndexPage = () => {
       <section className='contact-section'>
         <h1>Get In Touch <img src='icons/contact.svg' /></h1>
         <p>Love what I've done so far and wanna work with me? I'd love to hear from you!</p>
-        <p>Fill out the form below or directly at <b>rosie.junghwa@gmail.com</b></p>
+        <p>Fill out the form below or directly at 💌 <b>rosie.junghwa@gmail.com</b></p>
 
         <ContactForm />
       </section>

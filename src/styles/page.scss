@@ -1,42 +1,29 @@
 @import 'global';
 
 // ========================================
-// MAIN
+// MAIN TEXT BOX
 // ========================================
 
 .text-box {
-  width: 70%;
-  margin: 0 auto;
+  width: 70vw;
+  max-width: 1400px;
+  margin: 2rem auto 5rem;
 
-  h1 {
-    font-size: 2.5rem;
+  h2 {
+    font-size: 1.7rem;
   }
 
-  p, ol, ul, li {
+  p {
     margin: 1rem 0;
   }
 
-  ul {
-    list-style: disc;
-
-    li>ul {
-      list-style: circle;
-      margin-left: 2rem;
-    }
-  }
-
-  a>img {
-    display: inline;
-    width: 1.5rem;
-    margin: 0 0.5rem;
+  .emphasized {
+    @include emphasized;
   }
 }
 
-.emphasized {
-  font-style: italic;
-  font-weight: bold;
-  background: linear-gradient(180deg, $background-color 50%, $emphasized-color 50%);
-  padding: 0 3px;
+.text-404 {
+  text-align: center;
 }
 
 // ========================================
@@ -44,16 +31,50 @@
 // ========================================
 
 section {
-  margin-top: 10rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  padding: 5rem 0;
 }
 
-section.skills {
+.skills-section {
+  background-color: $mono-background-color;
+  background-image: $gradient-background-color;
+
   h1 {
     font-size: 3rem;
+    margin-bottom: .5rem;
+  }
+}
+
+.skill-list {
+  width: 60vw;
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+  gap: 1.5rem;
+
+  .skill-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .img-wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: .5rem;
+
+      img {
+        width: 70%;
+      }
+    }
+
+    p {
+      font-size: .9rem;
+    }
   }
 }
 
@@ -61,31 +82,111 @@ section.skills {
 // CONTACT SECTION
 // ========================================
 
-section.contact {
-  min-height: 50vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.contact-section {
+  width: 70vw;
+  max-width: 1400px;
+  margin: 0 auto;
 
-  h3 {
-    font-family: 'Yanone Kaffeesatz';
-    font-size: 2rem;
-    margin-bottom: 2rem;
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+
+    img {
+      height: 3rem;
+    }
   }
 
-  a {
-    font-size: 1.5rem;
+  p>b {
+    font-weight: 500;
   }
-  
-  form {
+}
+
+.contact-form {
+  .form-input {
+    width: 30vw;
+    margin: 1rem auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  }
 
-    label {
-      color: $background-color;
+  input, textarea {
+    font-family: $text-font-family;
+    font-size: 1.1rem;
+    padding: .8rem;
+    border-radius: 0;
+    border-color: $weak-font-color;
+    border-width: 0 0 2px 0;
+    border-style: none none solid none;
+    box-shadow: none;
+
+    &:focus {
+      outline: none;
+      border-color: $border-color;
     }
+  }
+
+  input {
+    height: 3rem;
+    margin-bottom: .5rem;
+  }
+
+  textarea {
+    resize: none;
+    height: 5rem;
+  }
+
+  button {
+    padding: .5rem 1rem;
+    margin: .5rem auto 0;
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: $button-color;
+    border: none;
+    border-radius: 1rem;
+
+    &:hover {
+      color: $background-color;
+      background: $base-font-color;
+      cursor: pointer;
+      transition: all 500ms ease;
+    }
+  }
+}
+
+// ========================================
+// MEDIA QUERIES
+// ========================================
+
+@media screen and (max-width: 1100px) {
+  .contact-form>.form-input {
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .text-box {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .contact-form>.form-input {
+    width: 70vw;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .skills-section {
+    h1, p {
+      max-width: 80vw;
+      margin: 0 auto;
+    }
+  }
+
+  .skill-list {
+    width: 80vw;
+    grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
+    gap: 2rem;
   }
 }

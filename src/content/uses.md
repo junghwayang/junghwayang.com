@@ -23,6 +23,7 @@ A continuously updated list of things I use in my daily life. Inspired by Wes Bo
   - Customized little bit, and now it's so beautiful🧡 Who doesn't like pretty things? 😉
 - **Versioning** : GitHub, Sourcetree
 - **API Testing** : Postman
+- **Database** : MongoDB Compass
 
 ## ⚙️ Chrome Extensions
 

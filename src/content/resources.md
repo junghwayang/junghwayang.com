@@ -1,5 +1,5 @@
 ---
-title: 'Useful Resources for Development'
+title: 'Resources'
 category: 'resources'
 ---
 

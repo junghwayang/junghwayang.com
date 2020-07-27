@@ -5,14 +5,40 @@
 $background-color: #fff;
 $base-font-color: #444f5a;
 $weak-font-color: #9f9f9f;
-$border-color: #bad7df;
-$header-background-color: #bad7df;
+$border-color: #ca8585;
+$mono-background-color: #eeeded;
+$gradient-background-color: linear-gradient(20deg, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
 $footer-background-color: #fce38a;
-$page-title-color: #fce38a;
-$emphasized-color: #FFD0AE;
-$anchor-and-inlinecode-color: #e03d3e;
-$link-button-background-color: #fae3d9;
-$link-button-hover-background-color: #ea907a;
+$index-title-link-color: $border-color;
+$page-title-color: #bad7df;
+$emphasized-color: $footer-background-color;
+$nav-hover-color: $border-color;
+$button-color: $page-title-color;
+$tags-color: $mono-background-color;
+$inlinecode-color: #e03d3e;
+$markdown-link-font-color: $inlinecode-color;
+$markdown-link-hover-color: #07689f;
+
+$base-font-family: -apple-system, BlinkMacSystemFont, 'Poppins';
+$index-title-font-family: -apple-system, BlinkMacSystemFont, 'Montserrat';
+$title-font-family: -apple-system, BlinkMacSystemFont, 'Montserrat Alternates';
+$text-font-family: -apple-system, BlinkMacSystemFont, 'Open Sans';
+
+// ========================================
+// MIXIN
+// ========================================
+
+@mixin footer() {
+  position: relative;
+  background-color: $footer-background-color;
+}
+
+@mixin emphasized() {
+  font-style: italic;
+  font-weight: bold;
+  background: linear-gradient(180deg, $background-color 50%, $emphasized-color 50%);
+  padding: 0 4px;
+}
 
 // ========================================
 // GLOBAL
@@ -28,12 +54,11 @@ $link-button-hover-background-color: #ea907a;
 }
 
 html {
-  font-family: 'Poppins';
+  font-family: $base-font-family;
   box-sizing: border-box;
 }
 
 body {
-  width: 100%;
   background-color: $background-color;
 }
 
@@ -52,6 +77,5 @@ p, li {
 }
 
 main {
-  width: 100vw;
-  min-height: 100vh;
+  min-height: 50vh;
 }

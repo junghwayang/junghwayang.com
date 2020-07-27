@@ -1,11 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-const NavList = props => (
-  <li>
-    <Link to={props.to}>{props.children}</Link>
-  </li>
-);
+import NavbarList from './NavbarList';
+import NavToggle from './NavToggle';
 
 const Nav = () => {
   return (
@@ -17,14 +14,16 @@ const Nav = () => {
       </div>
 
       <ul className='nav-bar'>
-        <NavList to='/'>Home</NavList>
-        <NavList to='/about'>About</NavList>
-        <NavList to='/projects'>Projects</NavList>
-        <NavList to='/blog'>Blog</NavList>
-        <NavList to='/learn'>Learn In Public</NavList>
-        <NavList to='/resources'>Resources</NavList>
-        <NavList to='/uses'>Things I Use</NavList>
+        <NavbarList to='/'>Home</NavbarList>
+        <NavbarList to='/about'>About</NavbarList>
+        <NavbarList to='/projects'>Projects</NavbarList>
+        <NavbarList to='/blog'>Blog</NavbarList>
+        <NavbarList to='/learn'>Learn In Public</NavbarList>
+        <NavbarList to='/resources'>Resources</NavbarList>
+        <NavbarList to='/uses'>Things I Use</NavbarList>
       </ul>
+
+      <NavToggle />
     </nav>
   );
 }
