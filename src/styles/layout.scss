@@ -222,6 +222,18 @@
 }
 
 @media screen and (max-width: 550px) {
+  .border-frame {
+    box-shadow: inset 0 0 0 6px $border-color;
+  }
+
+  .logo, .nav-bar {
+    top: 12px;
+  }
+  
+  .logo {
+    left: 12px;
+  }
+
   .index-title-box {
     width: 80vw;
 

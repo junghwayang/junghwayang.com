@@ -5,7 +5,7 @@ import NavbarList from './NavbarList';
 
 const Hamburger = styled.div`
   display: none;
-  width: 2.3rem;
+  width: 2rem;
   height: 2.7rem;
   position: fixed;
   top: 25px;
@@ -38,6 +38,11 @@ const Hamburger = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+  }
+
+  @media screen and (max-width: 550px) {
+    top: 15px;
+    right: 15px;
   }
 `
 
