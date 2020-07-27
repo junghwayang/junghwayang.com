@@ -31,7 +31,7 @@ const IndexPage = () => {
           <SkillCard name='MongoDB' img='icons/mongodb.png' />
           <SkillCard name='AWS' img='icons/aws.png' />
           <SkillCard name='GraphQL' img='icons/graphql.png' />
-          <SkillCard name='REST API' img='icons/api.png' />
+          <SkillCard name='API' img='icons/api.png' />
           <SkillCard name='React' img='icons/react.png' />
           <SkillCard name='Gatsby' img='icons/gatsby.png' />
           <SkillCard name='HTML' img='icons/html.png' />

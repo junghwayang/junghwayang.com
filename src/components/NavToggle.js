@@ -17,7 +17,7 @@ const Hamburger = styled.div`
     height: 4px;
     background-color: ${({ open }) => open ? '#fff' : '#ca8585'};
     border-radius: 3rem;
-    transform-origin: 2px;
+    transform-origin: 0px;
     transition: all 300ms linear;
 
     &:nth-child(1) {
