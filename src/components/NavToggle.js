@@ -6,18 +6,19 @@ import NavbarList from './NavbarList';
 const Hamburger = styled.div`
   display: none;
   width: 2rem;
-  height: 2.7rem;
+  height: 1.5rem;
   position: fixed;
   top: 25px;
   right: 25px;
   z-index: 30;
+  cursor: pointer;
 
   div {
     width: 100%;
     height: 4px;
     background-color: ${({ open }) => open ? '#fff' : '#ca8585'};
     border-radius: 3rem;
-    transform-origin: 0px;
+    transform-origin: 2px;
     transition: all 300ms linear;
 
     &:nth-child(1) {
@@ -37,11 +38,11 @@ const Hamburger = styled.div`
   @media screen and (max-width: 800px) {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
   @media screen and (max-width: 550px) {
-    top: 15px;
+    top: 20px;
     right: 15px;
   }
 `
