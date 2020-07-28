@@ -59,32 +59,3 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 }
-
-// exports.createPages = async ({ graphql, actions }) => {
-//   const { createPage } = actions;
-//   const blogPostTemplate = path.resolve('./src/templates/blog-post.js');
-
-//   const result = await graphql(`
-//     query {
-//       allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/learn/"}}) {
-//         edges {
-//           node {
-//             fields {
-//               slug
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `);
-
-//   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-//     createPage({
-//       path: `/learn${node.fields.slug}`,
-//       component: blogPostTemplate,
-//       context: {
-//         slug: node.fields.slug
-//       },
-//     });
-//   });
-// }
