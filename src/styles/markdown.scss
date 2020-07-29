@@ -80,6 +80,7 @@
 
     &:hover {
       color: $markdown-link-hover-color;
+      border-bottom: 2px solid $markdown-link-font-color;
       transition: all 200ms ease;
     }
   }
