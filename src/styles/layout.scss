@@ -122,7 +122,7 @@
     display: inline;
     font-size: 3.5rem;
     text-align: center;
-    background: linear-gradient(180deg, $background-color 60%, $page-title-color 60%);
+    background: linear-gradient(180deg, transparent 60%, $page-title-color 60%);
   }
 }
 
@@ -189,7 +189,6 @@
 
     img {
       width: 1.8rem;
-      // max-height: 1.7rem;
       margin: 0 .5rem;
     }
   }
