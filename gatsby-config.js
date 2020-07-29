@@ -1,9 +1,13 @@
+require('dotenv').config();
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
-    title: "JUNGHWA",
-    author: "Junghwa Yang",
-    siteUrl: "https://junghwayang.com",
-    description: "Personal website for software engineer built with React, GatsbyJS and GraphQL",
+    title: 'JUNGHWA',
+    author: 'Junghwa Yang',
+    siteUrl: 'https://junghwayang.com',
+    description: 'Personal website for software engineer built with React, GatsbyJS and GraphQL',
+    logo: `${process.env.BASE_URL}/logo.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -15,7 +19,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
-        path: `${__dirname}/src/`,
+        path: path.join(__dirname, 'src'),
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, 'static'),
       },
     },
     {
