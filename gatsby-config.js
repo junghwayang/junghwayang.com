@@ -7,7 +7,7 @@ module.exports = {
     author: 'Junghwa Yang',
     siteUrl: 'https://junghwayang.com',
     description: 'Personal website for software engineer built with React, GatsbyJS and GraphQL',
-    logo: `${process.env.BASE_URL}/logo.png`,
+    logo: `${process.env.BASE_URL}/favicon.ico`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
