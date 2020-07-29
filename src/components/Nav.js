@@ -4,12 +4,16 @@ import { Link } from 'gatsby';
 import NavbarList from './NavbarList';
 import NavToggle from './NavToggle';
 
+import { useSiteMetadata } from '../hooks/use-site-metadata';
+
 const Nav = () => {
+  const { logo } = useSiteMetadata();
+
   return (
     <nav>
       <div>
         <Link to='/'>
-          <img src='icons/heart-with-arrow.svg' alt='JUNGHWA' className='logo' />
+          <img src={logo} alt='JUNGHWA' className='logo' />
         </Link>
       </div>
 

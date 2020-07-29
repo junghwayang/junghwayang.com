@@ -2,6 +2,14 @@ import React from 'react';
 
 import { useSiteMetadata } from '../hooks/use-site-metadata';
 
+import email from '../../static/icons/email.svg';
+import github from '../../static/icons/github.png';
+import linkedin from '../../static/icons/linkedin.svg';
+import twitter from '../../static/icons/twitter.svg';
+import heart from '../../static/icons/heart.png';
+import gatsby from '../../static/icons/gatsby.png';
+import netlify from '../../static/icons/netlify.svg';
+
 const Footer = props => {
   const { author } = useSiteMetadata();
 
@@ -22,23 +30,23 @@ const Footer = props => {
 
         <div className='footer-icons'>
           <a href='mailto:rosie.junghwa@gmail.com'>
-            <img src='icons/email.svg' alt='Email' title='Email' />
+            <img src={email} alt='Email' title='Email' />
           </a>
           <a href='https://github.com/junghwayang' target='__blank'>
-            <img src='icons/github.png' alt='GitHub' title='GitHub' />
+            <img src={github} alt='GitHub' title='GitHub' />
           </a>
           <a href='https://linkedin.com/in/junghwayang' target='__blank'>
-            <img src='icons/linkedin.svg' alt='LinkedIn' title='LinkedIn' />
+            <img src={linkedin} alt='LinkedIn' title='LinkedIn' />
           </a>
           <a href='https://twitter.com/rosie_junghwa' target='__blank'>
-            <img src='icons/twitter.svg' alt='Twitter' title='Twitter' />
+            <img src={twitter} alt='Twitter' title='Twitter' />
           </a>
         </div>
 
         <div className='footer-info'>
-          <p>Coded & Designed with <img src='icons/heart.png' alt='❤️' />.</p>
-          <p>Built with <img src='icons/gatsby.png' alt='GitHub' />Gatsby.</p>
-          <p>Hosted on <img src='icons/netlify.svg' alt='GitHub' />Netlify.</p>
+          <p>Coded & Designed with <img src={heart} alt='❤️' />.</p>
+          <p>Built with <img src={gatsby} />Gatsby.</p>
+          <p>Hosted on <img src={netlify} />Netlify.</p>
         </div>
         <p>© <b>{author}</b> 2020</p>
       </div>
