@@ -3,7 +3,7 @@ title: 'Things I use'
 category: 'uses'
 ---
 
-A continuously updated list of things I use in my daily life. Inspired by Wes Bos' [uses.tech](https://uses.tech/), so here I'm joining the party. 🎉
+A continuously updated list of things I use in my daily life. Inspired by Wes Bos' <a href='https://uses.tech/' target='__blank'>uses.tech</a>, so here I'm joining the party. 🎉
 
 ## 💻 Hardware
 
