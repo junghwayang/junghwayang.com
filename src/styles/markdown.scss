@@ -18,7 +18,7 @@
 .md-title {
   font-family: $title-font-family;
   font-size: 3.5rem;
-  margin: -7rem 0 2rem;
+  margin-bottom: 2rem;
 }
 
 .md-date, .md-tags>p {
@@ -42,6 +42,8 @@
 }
 
 .page-md-html, .md-html {
+  margin-top: 5rem;
+
   h1, h2, h3, h4, h5, h6 {
     font-family: $title-font-family;
   }
@@ -64,7 +66,8 @@
   }
 
   p, ol, ul, li {
-    margin: .5rem 0;
+    font-family: $text-font-family;
+    margin: .2rem 0;
   }
 
   p>span {
@@ -88,17 +91,6 @@
       list-style: circle;
       margin-left: 2rem;
     }
-  }
-}
-
-.page-md-html {
-  margin-top: 5rem;
-}
-
-.md-html {
-  p, ol, ul, li {
-    font-family: $text-font-family;
-    margin: .2rem 0;
   }
 
   blockquote {
