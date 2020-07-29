@@ -7,7 +7,7 @@
 .project-list {
   width: 70vw;
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 5rem auto 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -83,11 +83,14 @@
 // BLOG LIST
 // ========================================
 
-.blog-item {
+.blog-list {
   width: 60vw;
   max-width: 1200px;
+  margin: 5rem auto;
+}
+
+.blog-item {
   min-height: 3.5rem;
-  margin: 0 auto;
   padding: .5rem;
   display: flex;
   justify-content: space-between;
@@ -95,7 +98,7 @@
 
   &:hover {
     background-color: $mono-background-color;
-    border-radius: .5rem;
+    border-radius: 2px;
   }
 
   .blog-item-title {

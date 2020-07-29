@@ -29,7 +29,7 @@ const BlogPage = () => {
       title='Blog'
       headerTitle='Blog'
     >
-      <ul>
+      <ul className='blog-list'>
         {data.allMarkdownRemark.edges.map(({ node }) => {
           return (
             <li>
