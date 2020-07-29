@@ -7,7 +7,7 @@ export default () => {
   return (
     <Layout
       title='Message Sent'
-      headerTitle='🙏 Thank you 🙏'
+      headerTitle='Thank you 🙏'
     >
       <div className='text-box'>
         <div className='text-paragraph'>
