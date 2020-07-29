@@ -8,8 +8,8 @@ const Hamburger = styled.div`
   width: 2rem;
   height: 1.5rem;
   position: fixed;
-  top: 25px;
-  right: 25px;
+  top: 30px;
+  right: 30px;
   z-index: 30;
   cursor: pointer;
 
@@ -42,8 +42,8 @@ const Hamburger = styled.div`
   }
 
   @media screen and (max-width: 550px) {
-    top: 20px;
-    right: 15px;
+    top: 25px;
+    right: 20px;
   }
 `
 
