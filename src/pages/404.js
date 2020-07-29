@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 export default () => {
   return (
     <Layout
+      title='Page Not Found'
       headerTitle='Four-Oh-Four! 🤯'
     >
       <div className='text-box'>
