@@ -1,9 +1,28 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 
 import Layout from '../components/Layout';
 import LearnCard from '../components/LearnCard';
 
 const LearnPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark(filter: {fields: {slug: {regex: "/learn/"}}}, sort: {order: ASC, fields: frontmatter___date}) {
+        edges {
+          node {
+            frontmatter {
+              title
+              date(formatString: "MMMM DD, YYYY")
+            }
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <Layout
       title='Learn'
@@ -18,24 +37,52 @@ const LearnPage = () => {
         <div className='note-category'>
           <h1>JavaScript</h1>
           <ul>
-            <LearnCard to='/learn/javascript/' title='JS' />
-            <LearnCard to='/learn/javascript/' title='JS' />
+            {data.allMarkdownRemark.edges.filter(({ node }) => {
+              return node.fields.slug.startsWith('/learn/javascript/');
+            }).map(({ node }) => {
+              return (
+                <LearnCard to={node.fields.slug} title={node.frontmatter.title} />
+              );
+            })}
           </ul>
         </div>
 
         <div className='note-category'>
           <h1>Back-End</h1>
           <ul>
-            <LearnCard to='/learn/backend/' title='Node' />
-            <LearnCard to='/learn/backend/' title='Node' />
+            {data.allMarkdownRemark.edges.filter(({ node }) => {
+              return node.fields.slug.startsWith('/learn/backend/');
+            }).map(({ node }) => {
+              return (
+                <LearnCard to={node.fields.slug} title={node.frontmatter.title} />
+              );
+            })}
+          </ul>
+        </div>
+
+        <div className='note-category'>
+          <h1>AWS</h1>
+          <ul>
+            {data.allMarkdownRemark.edges.filter(({ node }) => {
+              return node.fields.slug.startsWith('/learn/aws/');
+            }).map(({ node }) => {
+              return (
+                <LearnCard to={node.fields.slug} title={node.frontmatter.title} />
+              );
+            })}
           </ul>
         </div>
 
         <div className='note-category'>
           <h1>General</h1>
           <ul>
-            <LearnCard to='/learn/general/' title='General' />
-            <LearnCard to='/learn/general/' title='General' />
+            {data.allMarkdownRemark.edges.filter(({ node }) => {
+              return node.fields.slug.startsWith('/learn/general/');
+            }).map(({ node }) => {
+              return (
+                <LearnCard to={node.fields.slug} title={node.frontmatter.title} />
+              );
+            })}
           </ul>
         </div>
       </div>
