@@ -32,7 +32,6 @@ const LearnPage = () => {
         <p>A collection of short notes about what I learn day to day across a variety of technologies. Notes are usually taken while learning and summarized in my words. I look up these notes whenever I need them.</p>
       </div>
       
-      {/* To manually order each note */}
       <div className='note-grid'>
         <div className='note-category'>
           <h1>JavaScript</h1>

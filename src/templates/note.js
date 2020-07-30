@@ -10,6 +10,7 @@ const NoteTemplate = props => {
     <Layout title='Note'>
       <div className='markdown'>
         <h1 className='md-title'>{note.frontmatter.title}</h1>
+        <p className='md-date'>Created : {note.frontmatter.date}</p>
 
         <div
           className='md-html'
@@ -27,6 +28,7 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
+        date
       }
       html
     }
