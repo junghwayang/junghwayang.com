@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import Layout from '../components/Layout';
-import LearnCard from '../components/LearnCard';
+import LearnCategory from '../components/LearnCategory';
 
 const LearnPage = () => {
   const data = useStaticQuery(graphql`
@@ -23,6 +23,19 @@ const LearnPage = () => {
     }
   `);
 
+  function Category(title, slug) {
+    this.title = title;
+    this.slug = slug;
+    this.edges = data.allMarkdownRemark.edges;
+  }
+
+  const categories = [
+    new Category('JavaScript', 'javascript'),
+    new Category('Back-End', 'backend'),
+    new Category('AWS', 'aws'),
+    new Category('General', 'general')
+  ]
+
   return (
     <Layout
       title='Learn'
@@ -33,57 +46,7 @@ const LearnPage = () => {
       </div>
       
       <div className='note-grid'>
-        <div className='note-category'>
-          <h1>JavaScript</h1>
-          <ul>
-            {data.allMarkdownRemark.edges.filter(({ node }) => {
-              return node.fields.slug.startsWith('/learn/javascript/');
-            }).map(({ node }) => {
-              return (
-                <LearnCard to={node.fields.slug} title={node.frontmatter.title} />
-              );
-            })}
-          </ul>
-        </div>
-
-        <div className='note-category'>
-          <h1>Back-End</h1>
-          <ul>
-            {data.allMarkdownRemark.edges.filter(({ node }) => {
-              return node.fields.slug.startsWith('/learn/backend/');
-            }).map(({ node }) => {
-              return (
-                <LearnCard to={node.fields.slug} title={node.frontmatter.title} />
-              );
-            })}
-          </ul>
-        </div>
-
-        <div className='note-category'>
-          <h1>AWS</h1>
-          <ul>
-            {data.allMarkdownRemark.edges.filter(({ node }) => {
-              return node.fields.slug.startsWith('/learn/aws/');
-            }).map(({ node }) => {
-              return (
-                <LearnCard to={node.fields.slug} title={node.frontmatter.title} />
-              );
-            })}
-          </ul>
-        </div>
-
-        <div className='note-category'>
-          <h1>General</h1>
-          <ul>
-            {data.allMarkdownRemark.edges.filter(({ node }) => {
-              return node.fields.slug.startsWith('/learn/general/');
-            }).map(({ node }) => {
-              return (
-                <LearnCard to={node.fields.slug} title={node.frontmatter.title} />
-              );
-            })}
-          </ul>
-        </div>
+        {categories.map(({ title, slug, edges }) => <LearnCategory title={title} slug={slug} edges={edges} />)}
       </div>
     </Layout>
   );
