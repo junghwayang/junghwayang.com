@@ -117,7 +117,7 @@
 
   code {
     font-family: 'Menlo';
-    font-size: .9rem;
+    font-size: 80%;
   }
 
   h1>code,
@@ -129,8 +129,9 @@
   li>code,
   blockquote>code {
     color: $inlinecode-color;
-    padding: .1rem .5rem;
-    border-radius: 7px;
+    padding: .1rem .3rem;
+    margin: 0 .1rem; 
+    border-radius: 3px;
   }
 
   h1>code,
