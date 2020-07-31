@@ -61,16 +61,17 @@
   }
 
   h3 {
-    margin-top: 2rem;
+    margin: 2rem 0 .5rem;
     font-size: 2rem;
   }
 
   p, ol, ul, li {
     font-family: $text-font-family;
+    font-size: 1.1rem;
     margin: .2rem 0;
   }
 
-  p>span {
+  p>span, ol>span, ul>span, li>span {
     @include emphasized;
   }
 
@@ -91,6 +92,10 @@
     li>ul {
       list-style: circle;
       margin-left: 2rem;
+
+      li>ul {
+        list-style: square;
+      }
     }
   }
 
@@ -103,6 +108,11 @@
       color: $weak-font-color;
       line-height: 1.7rem;
     }
+  }
+
+  hr {
+    border: 1.5px solid $weak-font-color;
+    margin: 3rem 0;
   }
 
   code {
@@ -154,6 +164,11 @@
     code>.token.template-string>.token.interpolation{
       color: #f6ab6c;
     }
+  }
+
+  .gatsby-resp-image-wrapper, img {
+    margin: 2rem 0;
+    max-width: 60vw;
   }
 }
 
