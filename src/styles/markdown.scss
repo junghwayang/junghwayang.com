@@ -129,7 +129,7 @@
   li>code,
   blockquote>code {
     color: $inlinecode-color;
-    padding: .1rem .3rem;
+    padding: .2rem .3rem;
     margin: 0 .1rem; 
     border-radius: 3px;
   }
@@ -153,10 +153,6 @@
     border-radius: 15px;
     padding: 1.5rem;
     margin: 1.8rem 0;
-
-    code>.token.comment {
-      color: $emphasized-color;
-    }
 
     code>.token.parameter {
       color: #ccc;
