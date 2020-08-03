@@ -5,6 +5,12 @@ date: '2020-04-30'
 
 ## `...` : Spread operator
 
+`...arr` returns an unpacked array. (comma-separated arguments)
+
+= it **spreads** the array.
+
+e.g. `const num = [1, 2, 3];` → `...num = 1 2 3`
+
 ```js
 const citrus = ['Lime', 'Lemon', 'Orange'];
 const fruits = ['Apple', ...citrus, 'Banana', 'Coconut'];
@@ -57,6 +63,28 @@ console.log(num3);             // 3
 ```
 
 ```js
+// TRICKS
+
+// Swap value among variables
+let a = 10, b = 20;
+
+[b, a] = [a, b];
+
+console.log(a);                // 20
+console.log(b);                // 10
+
+// Remove some elements
+const num = [1, 2, 3, 4, 5];
+
+function removeFirstTwo(list) {
+  const [,, ...arr] = list;
+  return arr;
+}
+
+console.log(removeFirstTwo(num));        // [3, 4, 5]
+```
+
+```js
 const animals = [
   { name: 'cat', sound: 'meow', feedingRequirements: { food: 2, water: 3 }},
   { name: 'dog', sound: 'woof' }
@@ -73,6 +101,7 @@ console.log(name);                        // cat
 console.log(sound);                       // meow
 console.log(feedingRequirements);         // { food: 2, water: 3 }
 
+// Assign variables from objects
 const { name: catName, sound: catSound, feedingRequirements: {food, water} } = cat;
 
 console.log(catName);             // cat

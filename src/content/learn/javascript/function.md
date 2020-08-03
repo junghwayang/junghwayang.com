@@ -1,5 +1,5 @@
 ---
-title: 'Functions'
+title: 'Function'
 date: '2020-04-27'
 ---
 
@@ -85,6 +85,12 @@ showMessage('Hi');                // Hi from stranger
 
 - `message`, `from` = <span>parameters</span> : variables in the function declaration
 - `'Hi'` = <span>arguments</span> : values passed to function when function is called
+
+## Arrow function
+
+- No function body + only a return value → omit the keyword `return` and `{ }` surrounding the code.
+- Simplify smaller functions into one-line statements
+- e.g. `const func = () => console.log('Hello');`
 
 ## Callback functions
 
