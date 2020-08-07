@@ -1,6 +1,6 @@
 ---
 title: 'Apollo GraphQL'
-date: '2020-08-06'
+date: '2020-08-05'
 ---
 
 > Learned from [Apollo official tutorial](https://www.apollographql.com/docs/tutorial/introduction).
