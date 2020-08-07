@@ -33,7 +33,9 @@ const LearnPage = () => {
     new Category('JavaScript', 'javascript'),
     new Category('Back-End', 'backend'),
     new Category('AWS', 'aws'),
-    new Category('General', 'general')
+    new Category('GraphQL', 'graphql'),
+    new Category('General', 'general'),
+    new Category('Data Structures', 'data-structures'),
   ]
 
   return (
