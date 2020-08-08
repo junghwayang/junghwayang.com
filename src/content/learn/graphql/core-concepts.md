@@ -157,10 +157,12 @@ subscription {
 - <span>Schema</span> : Specifies the capabilities of the API and defines how clients can request the data.
   - A **contract** between the server and client.
   - Simply a collection of GraphQL types.
-- Special root types : Entry points for the requests sent by the client.
+- Special <span>root types</span> : Entry points for the requests sent by the client.
   - `type Query { ... }`
   - `type Mutation { ... }`
   - `type Subscription { ... }`
+  - inside root types : `allPersons`, `createPerson`, `newPerson` are <span>root fields</span>
+  - Root fields define the available API operations
 - To enable the query `allPersons` with `last` argument
 
 ```graphql
