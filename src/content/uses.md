@@ -39,6 +39,7 @@ A continuously updated list of things I use in my daily life. Inspired by Wes Bo
 
 - Notion : Daily planner, life wiki, workout/meal planner, and keep track of tasks and projects
 - Bear : Take rough notes while learning, manage notes by tags
+- Todoist : To-do list to manage and plan work & life
 - Apple Notes : For quick memo
 
 ## 🎀 Accessories

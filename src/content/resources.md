@@ -3,14 +3,15 @@ title: 'Resources'
 category: 'resources'
 ---
 
-Below are resources that I use for development and help me continue learning and improving every day.
+Below are useful resources that I use for development and help me to continue learning and improving my coding skills every day.
 
 ## General
 
 - <a href='https://developer.mozilla.org/' target='__blank'>MDN Web Docs</a> : Everything about web development
 - <a href='https://www.udemy.com/' target='__blank'>Udemy</a> : My favorite platform to take online courses
 - <a href='https://roadmap.sh/' target='__blank'>Developer Roadmaps</a> : Guides and paths to become a developer
-- <a href='https://javascript.info/' target='__blank'>JavaScript Info</a> : JavaScript Tutorial
+- <a href='https://javascript.info/' target='__blank'>JavaScript Info</a> : JavaScript tutorial
+- <a href='https://www.freecodecamp.org/' target='__blank'>freeCodeCamp</a> : An interactive learning web platform
 - <a href='https://egghead.io/' target='__blank'>Egghead</a> : Video tutorials for web development
 - <a href='https://devdocs.io/' target='__blank'>DevDocs</a> : API documentation browser
 - <a href='https://gitmoji.carloscuesta.me/' target='__blank'>gitmoji</a> : Emoji guide for git commit messages
@@ -26,8 +27,11 @@ Below are resources that I use for development and help me continue learning and
 
 ## Front-End
 
-- <a href='https://www.iconbolt.com/' target='__blank'>Iconbolt</a>
 - <a href='https://bit.dev/' target='__blank'>Bit.dev</a> : Platform for front-end components
 - <a href='https://www.sketchappsources.com/' target='__blank'>Sketch App Sources</a> : Free design resources and plugins
 - <a href='https://colorhunt.co/' target='__blank'>Color Hunt</a> : Color palettes
-- <a href='http://www.responsivegridsystem.com' target='__blank'>Responsive Grid System</a>
+- <a href='http://www.responsivegridsystem.com/' target='__blank'>Responsive Grid System</a>
+- <a href='https://www.canva.com/' target='__blank'>Canva</a> : Create graphic designs easily with many templates
+- <a href='https://pixlr.com/' target='__blank'>Pixlr</a> : Online photo editor
+- <a href='https://fonts.google.com/' target='__blank'>Google Fonts</a>
+- Icons : <a href='https://fontawesome.com/' target='__blank'>Font Awesome</a>, <a href='https://www.flaticon.com/' target='__blank'>Flaticon</a>, <a href='https://www.iconbolt.com/' target='__blank'>Iconbolt</a>

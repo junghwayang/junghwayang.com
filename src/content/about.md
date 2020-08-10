@@ -15,7 +15,7 @@ I studied Data Science first as I love math and number things and worked as a <s
 
 I'm 100% self-taught and I have huge eager and thirst for new knowledge and experiences. One lesson I learned through this journey is that I could learn new things very quickly and how to find resources to learn and make them mine.
 
-While I’m not coding or in front of the screen, you can find me dancing in Zumba class 💃🏻, playing Badminton 🏸, working out 💪, trekking in nature ⛰, drinking beer 🍺, or Somek (mixed with Soju and Beer) or traveling around the world 🌏.
+While I’m not coding or in front of the screen, you can find me dancing in Zumba class 💃🏻, playing Badminton 🏸, working out 💪, trekking in nature ⛰, drinking beer 🍺, or Somaek (mixed with soju and beer) or traveling around the world 🌏.
 
 ## Countries I've visited
 
