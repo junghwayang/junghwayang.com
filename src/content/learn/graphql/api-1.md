@@ -1,5 +1,5 @@
 ---
-title: 'API with GraphQL + Node (1) - Create a server and build a schema'
+title: 'API (1) - Create a Server and Build a Schema'
 date: '2020-08-08'
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: 'API with GraphQL + Node (2) - Implement a query'
+title: 'API (2) - Implement a Query'
 date: '2020-08-10'
 ---
 
@@ -10,28 +10,37 @@ date: '2020-08-10'
 - Implement a `feed` query to retrieve a list of `Link` elements.
 
 - How to add a new feature to the API
-  1. Extend the GraphQL schema definition with a new **root field** (and new object types, if needed)
-  2. Implement corresponding **resolver functions** for the added fields
+  1. Extend the GraphQL schema definition with a <span>new root field</span>. (and new object types, if needed)
+  2. Implement corresponding <span>resolver functions</span> for the added fields.
 
 > This process is 'schema-driven' or 'schema-first' development.
 
-### Extend a schema
+### Extend the schema
+
+- Move `typeDefs` to separate file `src/schema.graphql`
+
+```graphql
+# src/schema.graphql
+
+type Query {
+  info: String!
+  feed: [Link!]!         # To retrieve a list of `Link` elements
+}
+
+type Link {
+  id: ID!
+  description: String!
+  url: String!
+}
+```
 
 ```js
 // src/index.js
 
-const typeDefs = `
-  type Query {
-    info: String!
-    feed: [Link!]!         # To retrieve a list of `Link` elements
-  }
-
-  type Link {
-    id: ID!
-    description: String!
-    url: String!
-  }
-`;
+const server = new GraphQLServer({
+  typeDefs: './src/schema.graphql',
+  resolvers,
+});
 ```
 
 ### Implement resolver functions
@@ -52,6 +61,7 @@ const resolvers = {
     // Add a new resolver (name 'feed' is same as in a schema)
     feed: () => links,
   },
+  // This 'Link' is just for explanation. No need to write this.
   Link: {
     id: (parent) => parent.id,
     description: (parent) => parent.description,
