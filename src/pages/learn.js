@@ -23,20 +23,13 @@ const LearnPage = () => {
     }
   `);
 
-  function Category(title, slug) {
+  function Category(title) {
     this.title = title;
-    this.slug = slug;
+    this.slug = title.toLowerCase().replace(/\ /g, '-');
     this.edges = data.allMarkdownRemark.edges;
   }
 
-  const categories = [
-    new Category('JavaScript', 'javascript'),
-    new Category('Back-End', 'backend'),
-    new Category('AWS', 'aws'),
-    new Category('GraphQL', 'graphql'),
-    new Category('General', 'general'),
-    new Category('Data Structures', 'data-structures'),
-  ]
+  const categories = ['JavaScript', 'Back-End', 'AWS', 'GraphQL', 'General', 'Data Structures'];
 
   return (
     <Layout
@@ -48,7 +41,9 @@ const LearnPage = () => {
       </div>
       
       <div className='note-grid'>
-        {categories.map(({ title, slug, edges }) => <LearnCategory title={title} slug={slug} edges={edges} />)}
+        {categories
+          .map(title => new Category(title))
+          .map(({ title, slug, edges }) => <LearnCategory title={title} slug={slug} edges={edges} />)}
       </div>
     </Layout>
   );

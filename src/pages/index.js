@@ -5,6 +5,13 @@ import SkillCard from '../components/SkillCard';
 import ContactForm from '../components/ContactForm';
 
 const IndexPage = () => {
+  function Skill(name) {
+    this.name = name;
+    this.img = `./icons/${name.toLowerCase().replace(/[\.\/]/g, '')}.${name === 'Apollo' ? 'svg' : 'png'}`;
+  }
+
+  const skills = ['Node.js', 'Express', 'JavaScript', 'MongoDB', 'AWS', 'API', 'React', 'GraphQL', 'Gatsby', 'Prisma', 'Apollo', 'HTML', 'CSS', 'Sass/SCSS', 'Git', 'GitHub', 'CI/CD', 'Jenkins', 'Redis', 'MySQL', 'Testing'];
+
   return (
     <Layout
       title='Home'
@@ -25,26 +32,9 @@ const IndexPage = () => {
         <p>Primary focus on Node.js + Express</p>
 
         <div className='skill-list'>
-          <SkillCard name='Node.js' img='icons/node.png' />
-          <SkillCard name='Express' img='icons/express.png' />
-          <SkillCard name='JavaScript' img='icons/javascript.png' />
-          <SkillCard name='MongoDB' img='icons/mongodb.png' />
-          <SkillCard name='AWS' img='icons/aws.png' />
-          <SkillCard name='API' img='icons/api.png' />
-          <SkillCard name='GraphQL' img='icons/graphql.png' />
-          <SkillCard name='Apollo' img='icons/apollo.svg' />
-          <SkillCard name='React' img='icons/react.png' />
-          <SkillCard name='Gatsby' img='icons/gatsby.png' />
-          <SkillCard name='HTML' img='icons/html.png' />
-          <SkillCard name='CSS' img='icons/css.png' />
-          <SkillCard name='Sass/SCSS' img='icons/sass.png' />
-          <SkillCard name='Git' img='icons/git.png' />
-          <SkillCard name='GitHub' img='icons/github.png' />
-          <SkillCard name='CI/CD' img='icons/cicd.png' />
-          <SkillCard name='Jenkins' img='icons/jenkins.png' />
-          <SkillCard name='Redis' img='icons/redis.png' />
-          <SkillCard name='MySQL' img='icons/mysql.png' />
-          <SkillCard name='Testing' img='icons/testing.png' />
+          {skills
+            .map(name => new Skill(name))
+            .map(({ name, img }) => <SkillCard name={name} img={img} />)}
         </div>
       </section>
 
