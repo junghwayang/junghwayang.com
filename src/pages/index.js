@@ -10,7 +10,7 @@ const IndexPage = () => {
     this.img = `./icons/${name.toLowerCase().replace(/[\.\/]/g, '')}.${name === 'Apollo' ? 'svg' : 'png'}`;
   }
 
-  const skills = ['Node.js', 'Express', 'JavaScript', 'MongoDB', 'AWS', 'API', 'React', 'GraphQL', 'Gatsby', 'Prisma', 'Apollo', 'HTML', 'CSS', 'Sass/SCSS', 'Git', 'GitHub', 'CI/CD', 'Jenkins', 'Redis', 'MySQL', 'Testing'];
+  const skills = ['Node.js', 'Express', 'JavaScript', 'MongoDB', 'AWS', 'API', 'React', 'GraphQL', 'Gatsby', 'Prisma', 'Apollo', 'EJS', 'Pug', 'Jest', 'Git', 'GitHub', 'MySQL', 'CI/CD', 'Jenkins', 'Redis', 'HTML5', 'CSS3', 'Sass/SCSS', 'TDD'];
 
   return (
     <Layout
