@@ -19,8 +19,7 @@ A continuously updated list of things I use in my daily life. Inspired by Wes Bo
 - **Editor** : Visual Studio Code
   - Font : Menlo
   - Theme : Community Material Theme Darker
-- **Terminal** : Hyper
-  - Customized little bit, and now it's so beautiful🧡 Who doesn't like pretty things? 😉
+- **Terminal** : iTerm2 + Oh My Zsh + Agnoster theme + Customized color scheme
 - **Versioning** : GitHub, Sourcetree
 - **API Testing** : Postman
 - **Database** : MongoDB Compass
@@ -28,6 +27,7 @@ A continuously updated list of things I use in my daily life. Inspired by Wes Bo
 ## ⚙️ Chrome Extensions
 
 - Momentum : New tab page with inspirational picture and quote
+- Vimium : Keyboard shortcuts for navigation
 - React Developer Tools : Inspect the React component hierarchies and debugging
 - JSON Viewer Awesome : Visualise JSON response
 - Pesticide for Chrome
