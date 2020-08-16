@@ -1,6 +1,6 @@
 ---
 title: 'API (3) - Add a Mutation'
-date: '2020-08-11'
+date: '2020-08-10'
 ---
 
 > Learned how to build a GraphQL API from scratch from [How to GraphQL official tutorial](https://www.howtographql.com/graphql-js/0-introduction/).

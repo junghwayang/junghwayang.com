@@ -1,6 +1,6 @@
 ---
 title: 'API (2) - Implement a Query'
-date: '2020-08-10'
+date: '2020-08-09'
 ---
 
 > Learned how to build a GraphQL API from scratch from [How to GraphQL official tutorial](https://www.howtographql.com/graphql-js/0-introduction/).
