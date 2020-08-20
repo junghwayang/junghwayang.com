@@ -66,6 +66,14 @@ const ProjectsPage = () => {
           demo='https://weather-jh.herokuapp.com'
           code='https://github.com/junghwayang/weather-app'
         />
+        <ProjectCard
+          title='Drum Kit'
+          skills={['JavaScript', 'HTML', 'CSS']}
+          description='Single page app to play drums using vanilla JavaScript. Make corresponding drum sounds by clicking the button or pressing the keyboard.'
+          img='./project-images/drumkit.png'
+          demo='https://codepen.io/rosie-junghwa/full/mdPrgXo'
+          code='https://codepen.io/rosie-junghwa/pen/mdPrgXo'
+        />
       </div>
     </Layout>
   );
