@@ -69,7 +69,7 @@ const ProjectsPage = () => {
         <ProjectCard
           title='Drum Kit'
           skills={['JavaScript', 'HTML', 'CSS']}
-          description='Single page app to play drums using vanilla JavaScript. Make corresponding drum sounds by clicking the button or pressing the keyboard.'
+          description='Single page app to play drums using vanilla JavaScript. Make corresponding drum sounds by clicking the button or pressing the keyboard. Use AWS S3 bucket to upload assets such as images and sounds, and CodePen to host code snippets.'
           img='./project-images/drumkit.png'
           demo='https://codepen.io/rosie-junghwa/full/mdPrgXo'
           code='https://codepen.io/rosie-junghwa/pen/mdPrgXo'
