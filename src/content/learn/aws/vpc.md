@@ -73,38 +73,6 @@ date: '2020-04-01'
   - Provide a target in VPC route tables for internet-routable traffic.
   - Perform NAT for instances that have been assigned **public** IPv4 addresses.
 
-# NAT (Network Address Translation)
-
-![](./images/vpc-2.png)
-
-### NAT Gateways
-
-- always located in **public** subnet
-- to enable instances in a private subnet to connect to the internet or other AWS services
-- redundant inside AZ
-- start at 5Gbps, up to 45Gbps
-- no need to patch
-- not associated with security groups
-- automatically assigned public IP address
-- remember to update route tables
-- no need to disable Source/Destination checks
-- create in each AZ, configure routing 
-- For common use cases, Amazon recommend that you use a NAT gateway rather than a NAT instance.
-
-### NAT Instances
-
-- NAT instance in a public subnet to enable instances in the private subnet to initiate outbound IPv4 traffic to the Internet or other AWS services
-- when creating, disable source/destination check on instance
-- must be in public subnet
-- there must be a route out of private subnet to NAT instance
-- the amount of traffic that NAT instances can support - depend on the instance size
-  - if you have bottleneck, increase instance size
-- can create high availability
-  - using Autoscaling groups/ multiple subnets in different AZs/ a script to automate failover
-- located behind security group
-
-> NAT Gateways/Instances are only intended for EC2 instances to gain outbound access to the internet for things such as security updates.
-
 ## NACL (Network Access Control Lists)
 
 - Layer of security acting as a <span>virtual firewall</span> for controlling traffic in/out of <span>subnets</span>.
@@ -130,9 +98,17 @@ date: '2020-04-01'
 
 - A <span>virtual firewall</span> controlling the traffic in/out of <span>EC2 instances</span>.
 - Provide security at the **protocol** and **port** access level.
-- **No deny** rules. All traffic is blocked by default unless a rule allows it.
+- **No deny** rules.
+  - Cannot block specific IP addresses.
+- All inbound traffic is **blocked** by default.
+- All outbound traffic from the instance is **allowed** by default.
 - Multiple instances across multiple subnets can belong to one Security Group.
 - <span>Stateful</span> : Any changes applied to an inbound rule will be automatically applied to the outbound rule.
+  - = If traffic is allowed inbound, it's also allowed outbound.
+- Limits
+  - Max 10,000 Security Groups in a Region
+  - 60 inbound rules & 60 outbound rules per Security Group
+  - 16 Security Groups per ENI
 
 ## VPC Flow Logs
 
@@ -149,6 +125,37 @@ date: '2020-04-01'
   - = you can definitely have VPC flow logs between peer VPC.
   - but only within same AWS account, not across accounts.
 - After creation, cannot change configuration.
+
+## NAT (Network Address Translation)
+
+- Method of re-mapping one IP address space into another.
+- To enable EC2 instances in a **Private subnet** to <span>gain outbound access to the internet</span> or other AWS services.
+- NATs must exist in a **Public Subnet**.
+
+![](./images/vpc-2.png)
+
+> Use NAT Gateways(new) rather than NAT instances(old). Because they provide better availability and bandwidth.
+
+### NAT Gateways
+
+- Redundant instances inside selected AZ.
+  - Only have 1 NAT Gateway in 1 AZ. (cannot span AZs)
+- Start at 5 Gbps, up to 45 Gbps
+- Not associated with Security Groups.
+- Route tables must be updated.
+- Automatically assigned public IP address.
+- No need to disable source/destination checks and no requirement to patch.
+
+### NAT Instances
+
+- Individual EC2 instances.
+- When creating, you must **disable source/destination checks** on instance.
+- There must be a route out of private subnet to NAT instance.
+- Size of NAT instance determines how much traffic can be handled.
+  - If you have bottleneck, increase NAT instance size.
+- High availability can be achieved using :
+  - Autoscaling groups, multiple subnets in different AZs, a script to automate failover.
+- Located behind Security Group.
 
 ## Bastion Host
 
@@ -179,20 +186,50 @@ date: '2020-04-01'
 - When you need a stable/reliable/**fast** secure connection
 - Create **public** virtual interface in Direct connect console.
 
-# Global Accelerator
+## VPC Endpoints
+
+- Like a <span>secret tunnel</span> where you don't have to leave the AWS network.
+- **Privately connect** your VPC to other AWS services/VPC endpoint services
+- Eliminates the need for : Internet Gateway, NAT device, VPN connection, AWS Direct Connect.
+- Instances in VPC **don't require public IP addresses** to communicate with resources in the service.
+- Help keep traffic between VPC and other services : **doesn't leave** AWS network.
+- Horizontally scaled, redundant, highly available.
+
+### 2 Types of VPC Endpoints
+
+- <span>Interface Endpoint</span>
+  - **ENI**(Elastic Network Interface) with a **private** IP address.
+  - Powered by AWS PrivateLink.
+  - Serve as an entry point for traffic going to a supported service.
+  - Cost money
+  - Supports many AWS services.
+  - Attach ENI to EC2 instance
+      - can communicate to services using Amazon internal network
+      - no need to traverse Internet
+- <span>Gateway Endpoint</span>
+  - A gateway that is a target for a specific route in your route table.
+  - Only supports 2 services : **S3, DynamoDB**
+  - Free of charge
+  - from instance in private subnet,
+      - send files to VPC gateway,
+      - and gateway send that file to S3 bucket.
+      - then it'll not leave Amazon network.
+  - Must specify VPC in which you want to create the endpoint, and the service to which you want to establish the connection.
+
+## Global Accelerator
 
 ![](https://d1.awsstatic.com/r2018/b/ubiquity/global-accelerator-how-it-works.feb297eb78d8cc55205874a1691e0ea2bc8bdbf1.png)
 
 - to improve availability/performance of your applications for users
 - direct traffic to optimal endpoints over AWS global network
 
-## Without Global Accelerator
+### Without Global Accelerator
 
 ![](https://d1.awsstatic.com/r2018/b/ubiquity/global-accelerator-before.46be83fdc7c630457bba963c7dc928cb676d9046.png)
 
 Take many networks to reach the application. Paths to and from the application may differ. Each hop impacts performance and can introduce risks.
 
-## With Global Accelerator
+### With Global Accelerator
 
 ![](https://d1.awsstatic.com/r2018/b/ubiquity/global-accelerator-after.2e404ac7f998e501219f2614bc048bb9c01f46d4.png)
 
@@ -229,33 +266,3 @@ Adding Global Accelerator removes these inefficiencies. It leverages the Global 
   - can be Network Load Balancers, Application Load Balancers, EC2 instances, or Elastic IP addresses
   - traffic is routed to endpoints based on configuration
   - for each endpoint, you can configure weights (proportion of traffic)
-
-## VPC Endpoints
-
-- Like a <span>secret tunnel</span> where you don't have to leave the AWS network.
-- **Privately connect** your VPC to other AWS services/VPC endpoint services
-- Eliminates the need for : Internet Gateway, NAT device, VPN connection, AWS Direct Connect.
-- Instances in VPC **don't require public IP addresses** to communicate with resources in the service.
-- Help keep traffic between VPC and other services : **doesn't leave** AWS network.
-- Horizontally scaled, redundant, highly available.
-
-### 2 Types of VPC Endpoints
-
-- <span>Interface Endpoint</span>
-  - **ENI**(Elastic Network Interface) with a **private** IP address.
-  - Powered by AWS PrivateLink.
-  - Serve as an entry point for traffic going to a supported service.
-  - Cost money
-  - Supports many AWS services.
-  - Attach ENI to EC2 instance
-      - can communicate to services using Amazon internal network
-      - no need to traverse Internet
-- <span>Gateway Endpoint</span>
-  - A gateway that is a target for a specific route in your route table.
-  - Only supports 2 services : **S3, DynamoDB**
-  - Free of charge
-  - from instance in private subnet,
-      - send files to VPC gateway,
-      - and gateway send that file to S3 bucket.
-      - then it'll not leave Amazon network.
-  - Must specify VPC in which you want to create the endpoint, and the service to which you want to establish the connection.
