@@ -20,6 +20,15 @@
   .emphasized {
     @include emphasized;
   }
+
+  a {
+    @include link;
+  }
+
+  img {
+    height: 1.1rem;
+    margin-bottom: -1px;
+  }
 }
 
 .text-paragraph {

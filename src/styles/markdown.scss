@@ -68,7 +68,7 @@
   p, ol, ul, li {
     font-family: $text-font-family;
     font-size: 1.1rem;
-    margin: .2rem 0;
+    margin: .5rem 0;
   }
 
   p>span, ol>span, ul>span, li>span {
@@ -76,14 +76,7 @@
   }
 
   a {
-    color: $markdown-link-font-color;
-    font-weight: 600;
-
-    &:hover {
-      color: $markdown-link-hover-color;
-      border-bottom: 2px solid $markdown-link-font-color;
-      transition: all 200ms ease;
-    }
+    @include link;
   }
 
   ul {

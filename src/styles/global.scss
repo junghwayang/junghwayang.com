@@ -40,6 +40,17 @@ $text-font-family: -apple-system, BlinkMacSystemFont, 'Open Sans';
   padding: 0 4px;
 }
 
+@mixin link() {
+  color: $markdown-link-font-color;
+  font-weight: 600;
+
+  &:hover {
+    color: $markdown-link-hover-color;
+    border-bottom: 2px solid $markdown-link-font-color;
+    transition: all 200ms ease;
+  }
+}
+
 // ========================================
 // GLOBAL
 // ========================================
