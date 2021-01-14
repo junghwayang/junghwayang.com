@@ -8,43 +8,55 @@ A continuously updated list of things I use in my daily life. Inspired by Wes Bo
 ## 💻 Hardware
 
 - MacBook Pro (13-inch, 2017)
-- Apple Magic Keyboard 2
-- Apple Magic Mouse 2
-- Apple AirPods : My all-time favorite. Use it everyday when I code, work out, and listen to music on the go.
+- Magic Keyboard 2 + Magic Trackpad 2
+- iPad Air 4 + Apple Pencil 2
+- AirPods : My all-time favorite. Use it everyday when I code, work out, and listen to music on the go.
 - iPhone XS
 
-## 🚀 Development
+## 🚀 Development Tools
 
 - **Browser** : Google Chrome
-- **Editor** : Visual Studio Code
+- **IDE** : WebStorm (for work)
+- **Editor** : VS Code
   - Font : Menlo
   - Theme : Community Material Theme Darker
 - **Terminal** : iTerm2 + Oh My Zsh + Agnoster theme + Customized color scheme
-- **Versioning** : GitHub, Sourcetree
+- **Versioning** : GitHub, Bitbucket
 - **API Testing** : Postman
-- **Database** : MongoDB Compass
+- **Database** : Robo 3T
 
-## ⚙️ Chrome Extensions
+## 🤝 Collaboration Tools
 
+- **Communication** : Slack
+- **Project Management** : Trello, Notion, Miro
+
+## ⚙️ Apps & Chrome Extensions
+
+- Rectangle : Move and resize windows using shortcuts
+- Alfred : App launcher with hotkeys, keywords
 - Momentum : New tab page with inspirational picture and quote
+- Be Focused : Pomodoro timer
+- Kap : Screen recorder
 - Vimium : Keyboard shortcuts for navigation
-- React Developer Tools : Inspect the React component hierarchies and debugging
 - JSON Viewer Awesome : Visualise JSON response
+- React Developer Tools
 - Pesticide for Chrome
 - Video Speed Controller
 - Super Simple Highlighter
 - Grammarly
+- Google Tag Assistant
 
 ## 📝 Digital Notes
 
 - Notion : Daily planner, life wiki, workout/meal planner, and keep track of tasks and projects
 - Bear : Take rough notes while learning, manage notes by tags
-- Todoist : To-do list to manage and plan work & life
-- Apple Notes : For quick memo
+- Apple Notes & Reminders
+- Day One
 
 ## 🎀 Accessories
 
 - Nexstand K2
+- Vapalux Clever Easy View : tablet, mobile stand
 - Mazzzzy Laptop Pouch
 - Samsonite Laptop Backpack
 - Moleskine Classic Notebook (Medium size, Hard cover)
