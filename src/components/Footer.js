@@ -48,7 +48,7 @@ const Footer = props => {
           <p>Built with <img src={gatsby} />Gatsby.</p>
           <p>Hosted on <img src={netlify} />Netlify.</p>
         </div>
-        <p>© <b>{author}</b> 2020</p>
+        <p>© <b>{author}</b> 2021</p>
       </div>
     </footer>
   );
