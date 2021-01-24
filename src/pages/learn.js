@@ -29,7 +29,7 @@ const LearnPage = () => {
     this.edges = data.allMarkdownRemark.edges;
   }
 
-  const categories = ['JavaScript', 'Back-End', 'AWS', 'GraphQL', 'General', 'Data Science', 'Data Structures'];
+  const categories = ['JavaScript', 'Data Structures', 'Algorithms', 'TypeScript', 'AWS', 'Back-End', 'GraphQL', 'Database', 'Data Science', 'General'];
 
   return (
     <Layout
@@ -39,7 +39,7 @@ const LearnPage = () => {
       <div className='text-box'>
         <p>A collection of short notes about what I learn day to day across a variety of technologies. Notes are usually taken while learning and summarized in my words. I look up these notes whenever I need them.</p>
       </div>
-      
+
       <div className='note-grid'>
         {categories
           .map(title => new Category(title))
