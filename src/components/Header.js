@@ -11,7 +11,7 @@ const Header = props => {
           </div>
 
           <div className='index-subtitle'>
-            <p>Full-stack Software Engineer</p>
+            <p>Back-end Software Engineer</p>
             <p>based in Sydney, Australia.</p>
           </div>
         </div>
