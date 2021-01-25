@@ -13,11 +13,13 @@ date: '2019-08-28'
       - one block of memory
       - immutable
   - Character array
-      - sequential collection of char data type variables. (Python doesn't have a character data type.)
+      - sequential collection of char data type variables. (Python doesn't have a char data type.)
       - stores n memory blocks continuously in memory
       - mutable
 
 ## String Manipulation
+
+> 문자열 조작할땐 항상 **슬라이싱**을 우선으로 사용할것!
 
 ```python
 # Declaration
@@ -114,20 +116,9 @@ H-e-l-l-o- -W-o-r-l-d
 ('12', '3', '45')
 
 # Check type - return boolean
-s.isalpha()   # is alphabetic?
-s.isalnum()   # is alphanumeric?
-s.isdigit()   # is digit?
+s.isalpha()     # is alphabetic?
+s.isalnum()     # is alphanumeric?
+s.isdigit()     # is digit?
 s.isnumeric()   # is numeric?
 s.isdecimal()   # is decimal?
 ```
-
-
-
-
-
-
-
-> 문자열 조작할땐 항상 **슬라이싱**을 우선으로 사용할것!
-
-- `a = b`로 하면 참조형태. 값을 할당하려면 `a = b[:]`
-
