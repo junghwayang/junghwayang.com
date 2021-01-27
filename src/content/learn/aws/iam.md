@@ -37,16 +37,20 @@ allows you to **manage users and their level of access** to the AWS Console.
 - shared access
 - granular(세분화된) permissions
 - identity federation (incl. Active Directory, Facebook, LinkedIn, ...)
+- multi-factor authentication
 - provide temporary access for users/devices/services
-- allow you to set up your own password rotation policy (주기적으로 비밀번호 변경하도록 하게함)
+- can create your own password rotation policy (주기적으로 비밀번호 변경하도록 하게함)
 - integrate with many different AWS services
 - support PCI DSS compliance (compliance framework)
 - universal = **global** (doesn't apply to regions)
 - new user has NO access
+- new user is assigned **Access Key ID & Secret Access Keys** when first created.
+  - not same as password
+  - can view only once. (if lose, must regenerate.)
 
 ## Key terminology for IAM
 
-1. <span>Users</span> : end users
+1. <span>Users</span> : end users (e.g. people, employees)
 2. <span>Groups</span> : a collection of users
 3. <span>Policies</span> : made up of docs (in a JSON format). give permissions.
 4. <span>Roles</span> : create roles and assign them to AWS resources.
