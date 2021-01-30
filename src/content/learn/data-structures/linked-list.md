@@ -49,7 +49,7 @@ date: '2021-01-25'
   - Access/Search: O(n)
 - Space complexity: O(n)
 
-## Usage
+## Implementation
 
 ```python
 class Node:
