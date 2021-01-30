@@ -8,10 +8,10 @@ import ContactForm from '../components/ContactForm';
 const IndexPage = () => {
   function Skill(name) {
     this.name = name;
-    this.img = `./icons/${name.toLowerCase().replace(/[\.\/]/g, '')}.${name === 'Apollo' ? 'svg' : 'png'}`;
+    this.img = `./icons/${name.toLowerCase().replace(/[\.\/]/g, '')}.png`;
   }
 
-  const skills = ['Node.js', 'Express', 'JavaScript', 'TypeScript', 'MongoDB', 'AWS', 'API', 'React', 'GraphQL', 'Gatsby', 'Prisma', 'Apollo', 'EJS', 'Pug', 'Jest', 'Git', 'GitHub', 'MySQL', 'CI/CD', 'Jenkins', 'Redis', 'HTML5', 'CSS3', 'Sass/SCSS'];
+  const skills = ['Node.js', 'Express', 'JavaScript', 'TypeScript', 'NestJS', 'MongoDB', 'MySQL', 'AWS', 'API', 'GraphQL', 'Apollo', 'Vue', 'React', 'Gatsby', 'EJS', 'Pug', 'Jest', 'Chai', 'Mocha', 'Git', 'CI/CD', 'CircleCI', 'HTML5', 'CSS3', 'Sass/SCSS'];
 
   return (
     <Layout
