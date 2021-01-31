@@ -11,7 +11,7 @@ const IndexPage = () => {
     this.img = `./icons/${name.toLowerCase().replace(/[\.\/]/g, '')}.png`;
   }
 
-  const skills = ['Node.js', 'Express', 'JavaScript', 'TypeScript', 'NestJS', 'MongoDB', 'MySQL', 'AWS', 'API', 'GraphQL', 'Apollo', 'Vue', 'React', 'Gatsby', 'EJS', 'Pug', 'Jest', 'Chai', 'Mocha', 'Git', 'CI/CD', 'CircleCI', 'HTML5', 'CSS3', 'Sass/SCSS'];
+  const skills = ['Node.js', 'Express', 'JavaScript', 'TypeScript', 'NestJS', 'MongoDB', 'MySQL', 'AWS', 'API', 'GraphQL', 'Apollo', 'Vue', 'React', 'Gatsby', 'Chai', 'Mocha', 'Jest', 'Git', 'CI/CD', 'CircleCI', 'EJS', 'Pug', 'HTML5', 'CSS3', 'Sass/SCSS'];
 
   return (
     <Layout
