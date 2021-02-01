@@ -11,6 +11,7 @@ date: '2021-01-30'
 - Deletion: front
 - Example
   - waiting in the queue to enter a restaurant
+- Useful in streaming, BFS
 
 ## Basic Operations
 
