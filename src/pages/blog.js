@@ -29,6 +29,10 @@ const BlogPage = () => {
       title='Blog'
       headerTitle='Blog'
     >
+      <div className='text-box' style={{textAlign: 'center'}}>
+        <p>Sometimes I write personal essays about myself, thoughts, and lifestyle.</p>
+      </div>
+
       <ul className='blog-list'>
         {data.allMarkdownRemark.edges.map(({ node }) => {
           return (
