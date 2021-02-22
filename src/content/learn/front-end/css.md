@@ -133,3 +133,62 @@ img {
   clear: left;       /* 텍스트의 왼쪽에 이미지나 그 어떤것에 wrap 당하지 않고 밑으로내려감 */
 }
 ```
+
+## Box-sizing
+
+include the padding and border in an element's total width and height.
+
+```css
+* {
+  box-sizing: border-box;
+}
+```
+
+> box-sizing을 안하면 width, height값에 `padding`, `border`값이 더해져, 내가 설정한 width, height값보다 실제 크기가 더 커짐
+
+## Linear Gradient
+
+Creates an image consisting of a progressive transition between two or more colors along a straight line. Its result is an object of the `<gradient>` data type, which is a special kind of `<image>`.
+
+- `image` 타입이기 때문에 `background: `로 지정해줘야지, `color` 타입처럼 `background-color: `로는 지정못함
+
+## Overflow
+
+content 내용이 너무 커서 container에 fit되지 못할때
+
+> `overflow` property only works for **block** elements with a specified height.
+
+### `overflow: visible;` (default)
+
+content가 짤리지 않고 container box 밖으로 삐져나옴
+
+### `overflow: hidden;`
+
+container보다 넘치는 content가 짤려서 안보임
+
+### `overflow: scroll;`
+
+content가 짤리고 수직, 수평 방향으로 스크롤바가 생성돼서 container 안에서 스크롤할 수 있게 됨 (필요없어도 스크롤바가 생김)
+
+### `overflow: auto;`
+
+scroll과 비슷. 그치만 이건 필요할때만 스크롤바가 생성됨.
+
+### `overflow-x` / `overflow-y`
+
+```css
+div {
+  overflow-x: hidden;       /* Hide horizontal scrollbar */
+  overflow-y: scroll;       /* Add vertical scrollbar */
+}
+```
+
+## SVG
+
+> **SVG** = **S**calable **V**ector **G**raphics
+
+- Why use SVG?
+  - 작은 file size - 압축이 용이함
+  - 선명도를 잃지 않고 어떤 사이즈로도 scaling 가능
+  - Retina display에서 잘보임
+  - Interactivity나 filter처럼 design control이 가능
