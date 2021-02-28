@@ -29,7 +29,7 @@ const LearnPage = () => {
     this.edges = data.allMarkdownRemark.edges;
   }
 
-  const categories = ['JavaScript', 'Data Structures', 'Algorithms', 'AWS', 'Back-End', 'Front-End', 'GraphQL', 'Database', 'Data Science', 'General'];
+  const categories = ['JavaScript', 'Data Structures', 'Algorithms', 'AWS', 'Back-End', 'Front-End', 'TypeScript', 'GraphQL', 'Database', 'Data Science', 'General'];
 
   return (
     <Layout
