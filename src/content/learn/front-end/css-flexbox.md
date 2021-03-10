@@ -66,7 +66,7 @@ date: '2020-06-30'
 
 : item들이 **여러 줄일때** 줄들을 어떻게 정렬할지 - item들이 한줄일땐 영향없음
 
-<img src="https://css-tricks.com/wp-content/uploads/2018/10/align-content.svg" alt="align-content" width="300px">
+<img src="https://css-tricks.com/wp-content/uploads/2018/10/align-content.svg" alt="align-content" width="300px"><br>
 
 ## Flex Items
 
